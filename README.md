@@ -11,6 +11,7 @@
 ## Markup and scripting languages <a id="introduction"></a>
   - What is a [markup language](https://www.semrush.com/blog/markup-language/)?
   - What is a [scripting language](https://www.techtarget.com/whatis/definition/scripting-language)? 
+  - Useful [links](https://zacniewski.github.io/old/useful-links/). 
 
 ## HTML <a id="paragraph1"></a>
   - HTML on the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML)
