@@ -14,16 +14,19 @@
   - Useful [links](https://zacniewski.github.io/old/useful-links/). 
 
 ## HTML <a id="paragraph1"></a>
-  - HTML on the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML)
-  - HTML on the [W3Schools](https://www.w3schools.com/html/default.asp)
+  - HTML on the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML),  
+  - HTML on the [W3Schools](https://www.w3schools.com/html/default.asp).
 
 ## CSS <a id="paragraph2"></a>
-  - CSS on the [W3Schools](https://www.w3schools.com/css/default.asp)
-  - CSS on the [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS)
+  - CSS on the [W3Schools](https://www.w3schools.com/css/default.asp),  
+  - CSS on the [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS).
 
 ## Javascript <a id="paragraph3"></a>
   - Javascript on the [W3Schools](https://www.w3schools.com/js/default.asp),  
-  - Javascript and [HTML DOM](https://www.w3schools.com/jsref/default.asp).  
+  - Javascript and [HTML DOM](https://www.w3schools.com/jsref/default.asp),  
+  - Kurs [Javascript](https://kursjs.pl/) po polsku, 
+  - Oficjalna strona [JSON](https://www.json.org/json-pl.html),  
+  - Working with [JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) on the MDN.  
 
 ## Markdown and Github <a id="paragraph4"></a>
   - Początki z [GitHub'em](https://www.flynerd.pl/2018/02/github-dla-zielonych-pierwsze-repozytorium.html),  
@@ -32,7 +35,8 @@
 
 ## XML and JSON <a id="paragraph5"></a>
   - XML on the [W3Schools](https://www.w3schools.com/xml/default.asp),  
-  - XML [tutorial](https://www.guru99.com/xml-tutorials.html)
+  - XML [tutorial](https://www.guru99.com/xml-tutorials.html).
 
 ## React <a id="paragraph6"></a>
   - Quick [start](https://react.dev/learn) with React,  
+  - Kurs [React](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) na YouTube.  
