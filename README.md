@@ -30,6 +30,7 @@
 
 ## V. Markdown and Github <a id="paragraph4"></a>
   - Początki z [GitHub'em](https://www.flynerd.pl/2018/02/github-dla-zielonych-pierwsze-repozytorium.html),  
+  - Github [Pages](https://pages.github.com/),  
   - Książka [GitHub Pro](https://git-scm.com/book/pl/v2) po polsku,  
   - Podstawy [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) na Githubie.  
 
