@@ -7,6 +7,7 @@
 5. [Markdown and Github](#paragraph4)
 5. [XML and JSON](#paragraph5)
 6. [React](#paragraph6)
+7. [Laboratories](#labs)
 
 ## I. Markup and scripting languages <a id="introduction"></a>
   - What is a [markup language](https://www.semrush.com/blog/markup-language/)?
@@ -44,7 +45,7 @@
   - Quick [start](https://react.dev/learn) with React,  
   - Kurs [React](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) na YouTube.  
 
-<hr>
+<hr><a id="labs"></a>
 
 ## Lab. nr 1 - "Podstawy WWW"
   - cel: stworzyć prostą stronę WWW, nie wymagającą użycia serwera webowego,
