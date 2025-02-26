@@ -43,3 +43,59 @@
 ## VII. React <a id="paragraph6"></a>
   - Quick [start](https://react.dev/learn) with React,  
   - Kurs [React](https://www.youtube.com/playlist?list=PL4cUxeGkcC9gZD-Tvwfod2gaISzfRiP9d) na YouTube.  
+
+<hr>
+
+## Lab. nr 1 - "Podstawy WWW"
+  - cel: stworzyć prostą stronę WWW, nie wymagającą użycia serwera webowego,
+  - strona powinna zawierać linki do trzech podstron, które należy utworzyć: 
+    - strona z listem (odpowiednio sformatowany tekst, przypominający list),
+    - strona z podręcznika technicznego, np. do informatyki (rysunki, tabele, wzory itp.),
+    - strona z formularzem (inputy, pola tekstowe, checkboxy itp.), bez walidacji wartości pól,  
+  - na stronie startowej należy umieścić informację o autorze oraz opcjonalnie np. logo, informacje o użytych technologiach itp.,
+  - do ww. zadania należy użyć HTML, CSS i JS, bez użycia dodatkowych bibliotek i frameworków,  
+  - można wykorzystać informacje z <a href="https://learn.shayhowe.com/html-css/" target="_blank">kursu o HTML i CSS</a>,
+  - co do JS, to można wykorzystać materiały z <a href="https://kursjs.pl/" target="_blank">kursu JS</a>,
+  - należy zapoznać się z modelem DOM: <a href="https://kursjs.pl/kurs/dom/dom.php" target="_blank">tutaj</a> lub <a href="https://www.w3schools.com/whatis/whatis_htmldom.asp" target="_blank">tutaj</a>,
+  - należy utworzyć plik <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">README.md</a>, który będzie zawierał opis zadania (można będzie go użyć w repozytorium w razie potrzeby),  
+  - zrzut każdej z czterech utworzonych stron należy umieścić w pliku `README.md` jako obrazek i krótko opisać; jak to zrobić opisane jest w ww. linku o Markdown w sekcji 'Images',  
+> Przewidywany czas: 3 x 2 godz. laboratoryjne.
+
+## Lab. nr 2 - "Praca z modelem DOM z wykorzystaniem Javascript"
+  - zadanie polega na wykorzystaniu języka JavaScript do wyświetlania, modyfikowania, tworzenia (itp.) elementów strony związanych z HTML i CSS, 
+  - należy użyć wybrany (dowolny) framework front-endowy do tego zadania, jeden z najpopularniejszych to <a href="https://getbootstrap.com/docs/5.0/getting-started/introduction/" target="_blank">Bootstrap </a>,
+  - można wykorzystać darmowy szablon, np. <a href="https://startbootstrap.com/templates/bare/" target="_blank">Bare</a>, bazujący na Bootstrapie,
+  - przydatna może być <a href="https://www.w3schools.com/jsref/default.asp" target="_blank">strona </a>o Javascript + DOM,
+  - np. korzystając z ww. szablonu Bootstrap, można dodać przycisk z klasą <code>badge-light</code> do strony (np. pod nagłówkiem 'Hello world'):  
+```html
+      <button type="button" class="btn btn-primary"&gt;
+              Notifications &lt;span class="badge badge-light">&lt;/span&gt;
+      &lt;/button&gt;
+```
+  Poniżej, np. przed końcem sekcji <code>body</code> wrzucamy skrypt, który szuka elementu z klasą <code>badge-light</code> i ustawia jego wartość (innerHTML) na liczbę 6:
+```javascript
+      &lt;script&gt;
+          let x = document.getElementsByClassName("badge-light");
+          x[0].innerHTML = 6; // x[0] to pierwszy znaleziony element
+      </script>
+```      
+  - w podobny sposób należy wykorzystać inne dostępne metody i właściwości Java Script do modyfikacji elementów strony,
+  -  wskazane użycie 20 różnych metod i właściwości Java Script do ww. modyfikacji, np.:  
+```
+  document.body.style.backgroundColor = "red"; // właściwość 'backgroundColor' </code>
+```
+lub  
+```
+      var node = document.createElement("LI");                 // Create a &lt;li&gt; node
+      var textnode = document.createTextNode("Water");         // Create a text node
+      node.appendChild(textnode);                              // Append the text to &lt;li&gt;
+      document.getElementById("myList").appendChild(node);     // Append &lt;li&gt; to &lt;ul&gt; with id="myList"
+  ```
+  - w powyższym przykładzie użyte zostały trzy metody, ale całość traktujemy jako jeden przypadek z 20 wymaganych,
+> Przewidywany czas: 2 x 2 godz. laboratoryjne.  
+
+## Lab. nr 3 - coming soon ...
+## Lab. nr 4 - coming soon ...
+## Lab. nr 5 - coming soon ...
+## Lab. nr 6 - coming soon ...
+
