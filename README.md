@@ -82,14 +82,14 @@
   - w podobny sposób należy wykorzystać inne dostępne metody i właściwości Java Script do modyfikacji elementów strony,
   -  wskazane użycie 20 różnych metod i właściwości Java Script do ww. modyfikacji, np.:  
 ```
-  document.body.style.backgroundColor = "red"; // właściwość 'backgroundColor' </code>
+  document.body.style.backgroundColor = "red"; // właściwość 'backgroundColor'
 ```
 lub  
 ```
-      var node = document.createElement("LI");                 // Create a &lt;li&gt; node
+      var node = document.createElement("LI");                 // Create a <li> node
       var textnode = document.createTextNode("Water");         // Create a text node
-      node.appendChild(textnode);                              // Append the text to &lt;li&gt;
-      document.getElementById("myList").appendChild(node);     // Append &lt;li&gt; to &lt;ul&gt; with id="myList"
+      node.appendChild(textnode);                              // Append the text to <li>;
+      document.getElementById("myList").appendChild(node);     // Append <li>; to <ul> with id="myList"
   ```
   - w powyższym przykładzie użyte zostały trzy metody, ale całość traktujemy jako jeden przypadek z 20 wymaganych,
 > Przewidywany czas: 2 x 2 godz. laboratoryjne.  
