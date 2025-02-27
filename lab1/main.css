@@ -1,0 +1,16 @@
+p { 
+    color: red; 
+    font-size: 20px; 
+}
+
+/* SEKCJA KOLORKÓW */
+
+.klasa1 { color: green; }
+
+.klasa3 { color: yellow; }
+
+.klasa2 { color: blue; }
+
+#id1 {color: orange;}
+
+#id2 {color: pink;}
