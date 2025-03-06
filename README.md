@@ -18,11 +18,13 @@
 
 ## II. HTML <a id="paragraph1"></a>
   - HTML on the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML),  
-  - HTML on the [W3Schools](https://www.w3schools.com/html/default.asp).
+  - HTML on the [W3Schools](https://www.w3schools.com/html/default.asp),
+  - HTML tutorial on [Ryan's tutorials](https://ryanstutorials.net/html-tutorial/).
 
 ## III. CSS <a id="paragraph2"></a>
   - CSS on the [W3Schools](https://www.w3schools.com/css/default.asp),  
   - CSS on the [MDN](https://developer.mozilla.org/en-US/docs/Web/CSS).
+  - CSS tutorial on [Ryan's tutorials](https://ryanstutorials.net/css-tutorial/).
 
 ## IV. Javascript <a id="paragraph3"></a>
   - Javascript on the [W3Schools](https://www.w3schools.com/js/default.asp),  
