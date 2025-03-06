@@ -57,11 +57,11 @@
     - strona z formularzem (inputy, pola tekstowe, checkboxy itp.), bez walidacji wartości pól,  
   - na stronie startowej należy umieścić informację o autorze oraz opcjonalnie np. logo, informacje o użytych technologiach itp.,
   - do ww. zadania należy użyć HTML, CSS i ewentualnie JS, bez użycia dodatkowych bibliotek i frameworków,  
-  - można wykorzystać informacje z <a href="https://learn.shayhowe.com/html-css/" target="_blank">kursu o HTML i CSS</a>,
+  - można wykorzystać informacje z <a href="https://ryanstutorials.net/html-tutorial/" target="_blank">kursu o HTML</a> i z <a href="https://ryanstutorials.net/css-tutorial/" target="_blank">kursu o CSS</a>,
   - co do JS, to można wykorzystać materiały z <a href="https://kursjs.pl/" target="_blank">kursu JS</a>,
   - należy utworzyć plik <a href="https://www.markdownguide.org/basic-syntax/" target="_blank">README.md</a>, który będzie zawierał opis zadania (można będzie go użyć w repozytorium w razie potrzeby),  
   - zrzut każdej z czterech utworzonych stron należy umieścić w pliku `README.md` jako obrazek i krótko opisać; jak to zrobić opisane jest w ww. linku o Markdown w sekcji 'Images',  
-> Przewidywany czas: 3 x 2 godz. laboratoryjne.
+> Przewidywany czas: 4 x 2 godz. laboratoryjne.
 
 ## Lab. nr 2 - "Praca z Javascript, wykorzystanie modelu DOM"
   - zadanie polega na wykorzystaniu języka JavaScript do wyświetlania, modyfikowania, tworzenia (itp.) elementów strony związanych z HTML i CSS, 
