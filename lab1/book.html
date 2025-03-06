@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Book</title>
     <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="table.css" media="screen">
 </head>
 <body>
     <!-- Site navigation menu -->
@@ -15,13 +16,51 @@
     </ul>
 
     <!-- Main content -->
-    <h1>Book page</h1>
+    <h1 style="color: blue;">Book page</h1>
 
     <p>Welcome to my styled page!</p>
 
-    <p>It lacks images, but at least it has style.
-    And it has links, even if they don't go
-    anywhere&hellip; </p>
+    <table>
+        <caption>
+          Front-end web developer course 2021
+        </caption>
+        <thead>
+          <tr>
+            <th scope="col">Person</th>
+            <th scope="col">Most interest in</th>
+            <th scope="col">Age</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <th scope="row">Chris</th>
+            <td>HTML tables</td>
+            <td>22</td>
+          </tr>
+          <tr>
+            <th scope="row">Dennis</th>
+            <td>Web accessibility</td>
+            <td>45</td>
+          </tr>
+          <tr>
+            <th scope="row">Sarah</th>
+            <td>JavaScript frameworks</td>
+            <td>29</td>
+          </tr>
+          <tr>
+            <th scope="row">Karen</th>
+            <td>Web performance</td>
+            <td>36</td>
+          </tr>
+        </tbody>
+        <tfoot>
+          <tr>
+            <th scope="row" colspan="2">Average age</th>
+            <td>33</td>
+          </tr>
+        </tfoot>
+      </table>
+      
 
     <p>There should be more here, but I don't know what yet.</p>
 
