@@ -32,6 +32,7 @@
   - Kurs [Javascript](https://kursjs.pl/) po polsku, 
 
 ## V. Markdown and Github <a id="paragraph4"></a>
+  - Markdown w [pigułce](https://www.markdownguide.org/basic-syntax/),  
   - Początki z [GitHub'em](https://www.flynerd.pl/2018/02/github-dla-zielonych-pierwsze-repozytorium.html),  
   - Github [Pages](https://pages.github.com/),  
   - Książka [GitHub Pro](https://git-scm.com/book/pl/v2) po polsku,  
