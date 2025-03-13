@@ -37,3 +37,11 @@ address {
   margin-top: 1em;
   padding-top: 1em;
   border-top: thin dotted }
+
+form {
+  width: 300px;
+  margin: 200px auto;
+  padding: 40px;
+  border: 2px solid #ccc;
+  background-color: #f9f9f9;
+}

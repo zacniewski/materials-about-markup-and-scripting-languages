@@ -19,16 +19,34 @@
 
     <p>Welcome to my styled page!</p>
 
-    <p>It lacks images, but at least it has style.
-    And it has links, even if they don't go
-    anywhere&hellip; </p>
+    <form>
+      <label for="name">Name:</label>
+      <input type="text" name="name"><br><br>
 
-    <p>There should be more here, but I don't know what yet.</p>
+      <label for="sex">Sex:</label>
+      <input type="radio" name="sex" id="male" value="male">
 
-    <!-- Sign and date the page, if you want to do it this way -->
-    <address>Made in summer semester of 2025 <br>
-      by myself &#128512;
-    </address>
+      <label for="male">Male</label>
+      <input type="radio" name="sex" id="female" value="female">
+
+      <label for="female">Female</label> <br><br>
+      <label for="country">Country: </label>
+
+      <select name="country" id="country">
+          <option>Select an option</option>
+          <option value="nepal">Nepal</option>
+          <option value="usa">USA</option>
+          <option value="australia">Australia</option>
+      </select><br><br>
+
+      <label for="message">Message:</label><br>
+      <textarea name="message" id="message" cols="30" rows="4"></textarea><br><br>
+
+      <input type="checkbox" name="newsletter" id="newsletter">
+      <label for="newsletter">Subscribe?</label><br><br>
+      
+      <input type="submit" value="Submit">
+  </form>
 
     <footer>&copy; Name Surname</footer>
 </body>
