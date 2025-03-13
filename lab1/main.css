@@ -45,3 +45,24 @@ form {
   border: 2px solid #ccc;
   background-color: #f9f9f9;
 }
+
+.letter {
+  margin-bottom: 30px;
+  font-size: xx-large;
+  font-family: fantasy;
+}
+
+.letter2 {
+  font-family: monospace;
+  margin-bottom: 20px;
+  color:black;
+  font-size: x-large;
+}
+
+.book {
+  margin: auto;
+}
+
+.equation {
+  margin: auto;
+}
