@@ -19,7 +19,8 @@
 ## II. HTML <a id="paragraph1"></a>
   - HTML on the [MDN](https://developer.mozilla.org/en-US/docs/Web/HTML),  
   - HTML on the [W3Schools](https://www.w3schools.com/html/default.asp),
-  - HTML tutorial on [Ryan's tutorials](https://ryanstutorials.net/html-tutorial/).
+  - HTML tutorial on [Ryan's tutorials](https://ryanstutorials.net/html-tutorial/),
+  - HTML and [math symbols](https://www.toptal.com/designers/htmlarrows/math/) from Toptal.  
 
 ## III. CSS <a id="paragraph2"></a>
   - CSS on the [W3Schools](https://www.w3schools.com/css/default.asp),  
