@@ -42,7 +42,7 @@
 ## VI. XML and JSON <a id="paragraph5"></a>
   - XML on the [W3Schools](https://www.w3schools.com/xml/default.asp),  
   - XML [tutorial](https://www.guru99.com/xml-tutorials.html).
-  - Oficjalna strona [JSON](https://www.json.org/json-pl.html),<https://www.markdownguide.org>  
+  - Oficjalna strona [JSON](https://www.json.org/json-pl.html),    
   - Working with [JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) on the MDN.  
 
 ## VII. React <a id="paragraph6"></a>
