@@ -97,10 +97,19 @@ lub
       document.getElementById("myList").appendChild(node);     // Append <li>; to <ul> with id="myList"
   ```
   - w powyższym przykładzie użyte zostały trzy metody, ale całość traktujemy jako jeden przypadek z 20 wymaganych,
-> Przewidywany czas: 3 x 2 godz. laboratoryjne.  
+> Przewidywany czas: 4 x 2 godz. laboratoryjne.  
 
-## Lab. nr 3 - coming soon ...
-## Lab. nr 4 - coming soon ...
+## Lab. nr 3 - "Obsługa zdarzeń za pomocą Javascript"
+
+- za pomocą metody [addEventListener](https://www.w3schools.com/js/js_htmldom_eventlistener.asp) należy obsłużyć 10 różnych wybranych zdarzeń,
+- lista zdarzeń HTML DOM do użycia <a href="https://www.w3schools.com/jsref/dom_obj_event.asp" target="_blank">tutaj</a>,
+- przykłady Keyboard Event na stronie <a href="https://kursjs.pl/kurs/events/events-keys" target="_blank">naszego kursu JS</a>,
+- kody dla <a href="http://keycode.info/" target="_blank">klawiszy</a>,
+- trochę przykładów: <a href="https://github.com/zacniewski/materials-about-internet-apps-and-www-websites/blob/main/zastosowania-java-script/scripts/3-event-handling.js" target="_blank">plik JS z teorią i kodem</a> oraz odpowiadający mu <a href="https://github.com/zacniewski/materials-about-internet-apps-and-www-websites/blob/main/zastosowania-java-script/event-handling.html" target="_blank">plik HTML</a>,
+- plusy za zróżnicowanie elementów za pomocą których realizowana będzie obsługa zdarzeń (elementy HTML, obiekt 'document', obiekt 'window') oraz za użycie metody removeEventListener().
+> Przewidywany czas: 4 x 2 godz. laboratoryjne.  
+
+## Lab. nr 4 - "Praca z danymi w formacie JSON"
+
 ## Lab. nr 5 - coming soon ...
-## Lab. nr 6 - coming soon ...
 
