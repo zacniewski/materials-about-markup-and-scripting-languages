@@ -110,6 +110,12 @@ lub
 > Przewidywany czas: 4 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 4 - "Praca z danymi w formacie JSON"
+  - oficjalna strona [JSON](https://www.json.org/json-pl.html),  
+  - pobieranie danych za pomocą metody [fetch()](https://www.w3schools.com/jsref/api_fetch.asp),  
+  - ...  
 
-## Lab. nr 5 - coming soon ...
+## Lab. nr 5 - "XML i inne formaty wymiany danych"  
+  - kilka słów o [XML](https://www.samouczekprogramisty.pl/xml-dla-poczatkujacych/),  
+  - formaty danch dla [programistów](https://mmazurek.dev/formaty-danych-ktore-powinien-znac-kazdy-programista/),  
+  - ...
 
