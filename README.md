@@ -82,7 +82,7 @@
 ```
   Poniżej, np. przed końcem sekcji <code>body</code> wrzucamy skrypt, który szuka elementu z klasą <code>badge-light</code> i ustawia jego wartość (innerHTML) na liczbę 6:
 ```javascript
-      &lt;script&gt;
+      <script>
           let x = document.getElementsByClassName("badge-light");
           x[0].innerHTML = 6; // x[0] to pierwszy znaleziony element
       </script>
