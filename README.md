@@ -137,11 +137,16 @@ lub
   } 
   ```
    - wyświetl wycieczki. Skorzystaj z przygotowanej funkcji `wyswietlOferte`,  
-   - do każdej oferty (każdego obiektu) dodaj nowy klucz o nazwie `rok` i wartości 2025. Wyświetl w konsoli zbiór po modyfikacji. 
+   - do każdej oferty (każdego obiektu) dodaj nowy klucz o nazwie `rok` i wartości 2025. Wyświetl w konsoli przeglądarki zbiór po modyfikacji. 
 > Przewidywany czas: 2 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 5 - "XML i inne formaty wymiany danych"  
-  
-  - ...
+  - korzystamy z pliku `lab5/assets/wycieczki.js`, zawierającego dane w formacie JSON,  
+  - za pomocą kodu JS (w ostateczności ręcznie) zamieniamy dane w formacie JSON na dane w następujących formatach:  
+    - CSV,  
+    - XML,  
+    - YAML
+  - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `wycieczki.xml` dla zamiany JSON -> XML,  
+  - wyświetlamy dane na stronie HTML lub w ostateczności w konsoli przeglądarki.  
 > Przewidywany czas: 2 x 2 godz. laboratoryjne.  
 
