@@ -110,7 +110,7 @@ lub
 - kody dla <a href="http://keycode.info/" target="_blank">klawiszy</a>,
 - trochę przykładów: <a href="https://github.com/zacniewski/materials-about-internet-apps-and-www-websites/blob/main/zastosowania-java-script/scripts/3-event-handling.js" target="_blank">plik JS z teorią i kodem</a> oraz odpowiadający mu <a href="https://github.com/zacniewski/materials-about-internet-apps-and-www-websites/blob/main/zastosowania-java-script/event-handling.html" target="_blank">plik HTML</a>,
 - plusy za zróżnicowanie elementów za pomocą których realizowana będzie obsługa zdarzeń (elementy HTML, obiekt 'document', obiekt 'window') oraz za użycie metody removeEventListener().
-> Przewidywany czas: 4 x 2 godz. laboratoryjne.  
+> Przewidywany czas: 3 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 4 - "Praca z danymi w formacie JSON"
   
@@ -148,5 +148,5 @@ lub
     - YAML
   - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `wycieczki.xml` dla zamiany JSON -> XML,  
   - wyświetlamy dane na stronie HTML lub w ostateczności w konsoli przeglądarki.  
-> Przewidywany czas: 2 x 2 godz. laboratoryjne.  
+> Przewidywany czas: 3 x 2 godz. laboratoryjne.  
 
