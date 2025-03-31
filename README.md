@@ -43,7 +43,10 @@
   - XML on the [W3Schools](https://www.w3schools.com/xml/default.asp),  
   - XML [tutorial](https://www.guru99.com/xml-tutorials.html).
   - Oficjalna strona [JSON](https://www.json.org/json-pl.html),    
-  - Working with [JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) on the MDN.  
+  - Working with [JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) on the MDN,  
+  - Pobieranie danych za pomocą metody [fetch()](https://www.w3schools.com/jsref/api_fetch.asp).  
+  - Kilka słów o [XML](https://www.samouczekprogramisty.pl/xml-dla-poczatkujacych/),  
+  - Formaty danch dla [programistów](https://mmazurek.dev/formaty-danych-ktore-powinien-znac-kazdy-programista/).  
 
 ## VII. React <a id="paragraph6"></a>
   - Quick [start](https://react.dev/learn) with React,  
@@ -97,7 +100,7 @@ lub
       document.getElementById("myList").appendChild(node);     // Append <li>; to <ul> with id="myList"
   ```
   - w powyższym przykładzie użyte zostały trzy metody, ale całość traktujemy jako jeden przypadek z 20 wymaganych,
-> Przewidywany czas: 4 x 2 godz. laboratoryjne.  
+> Przewidywany czas: 3 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 3 - "Obsługa zdarzeń za pomocą Javascript"
 
@@ -110,12 +113,35 @@ lub
 > Przewidywany czas: 4 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 4 - "Praca z danymi w formacie JSON"
-  - oficjalna strona [JSON](https://www.json.org/json-pl.html),  
-  - pobieranie danych za pomocą metody [fetch()](https://www.w3schools.com/jsref/api_fetch.asp),  
-  - ...  
+  
+  - korzystamy z pliku `lab4/assets/wycieczki.js`, zawierającego dane w formacie JSON,  
+  - wyświetl w konsoli przeglądarki:  
+    - całą tablicę `wycieczki`, 
+    - poszczególne jej elementy, korzystając z pętli `for/in`,  
+    - nazwy wszystkich wycieczek, korzystając z dowolnej wersji pętli for.  
+  - w kodzie HTML umieść diva z `id="oferty"`:  
+    - napisz funkcję `wyswietlOferte`, która jako argument otrzymuje pojedynczy obiekt (ofertę wycieczki) i zwraca kod HTML,  
+    - zwrócony kod HTML wyświetla: div-a z klasą "oferta" o wymiarach 250 x 150px oraz informacje o wycieczce: nazwę, kraj, rejon, cenę (patrz rysunek poniżej):  
+    ![oferty](lab4/assets/oferty.jpg)  
+  - wyświetl wycieczki, które odbywają się w Polsce za pomocą funkcji `wyswietlOfertePolska`. Skorzystaj z przygotowanej wcześniej funkcji `wyswietlOferte` i nieco ją zmodyfikuj,  
+  - z pliku `wycieczki.js` usuń wycieczkę z ido = 5 i zapisz dane jako nowy plik `wycieczki-2.js`. Wyświetl wycieczki. Skorzystaj z przygotowanej funkcji `wyswietlOferte`,  
+  - do tablicy `wycieczki` (z pliku `wycieczki-2.js`) dodaj nową ofertę o następujących parametrach:  
+  ```javascript
+  const nowaWycieczka = {
+       "ido":"20",
+       "potwierdzenie":"1",
+       "kraj":"Polska",
+       "rejon":"Wybrzeże",
+       "nazwa":"Gdańsk i ptasie zakątki",
+       "cena":"499"
+  } 
+  ```
+   - wyświetl wycieczki. Skorzystaj z przygotowanej funkcji `wyswietlOferte`,  
+   - do każdej oferty (każdego obiektu) dodaj nowy klucz o nazwie `rok` i wartości 2025. Wyświetl w konsoli zbiór po modyfikacji. 
+> Przewidywany czas: 2 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 5 - "XML i inne formaty wymiany danych"  
-  - kilka słów o [XML](https://www.samouczekprogramisty.pl/xml-dla-poczatkujacych/),  
-  - formaty danch dla [programistów](https://mmazurek.dev/formaty-danych-ktore-powinien-znac-kazdy-programista/),  
+  
   - ...
+> Przewidywany czas: 2 x 2 godz. laboratoryjne.  
 
