@@ -77,7 +77,7 @@
   - np. korzystając z ww. szablonu Bootstrap, można dodać przycisk z klasą <code>badge-light</code> do strony (np. pod nagłówkiem 'Hello world'):  
 ```html
       <button type="button" class="btn btn-primary">
-              Notifications <span class="badge badge-light">&lt;/span&gt;
+    Notifications <span class="badge badge-light"></span>
       </button>
 ```
   Poniżej, np. przed końcem sekcji <code>body</code> wrzucamy skrypt, który szuka elementu z klasą <code>badge-light</code> i ustawia jego wartość (innerHTML) na liczbę 6:
