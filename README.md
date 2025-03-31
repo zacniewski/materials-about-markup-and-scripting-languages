@@ -76,9 +76,9 @@
   - przydatna może być <a href="https://www.w3schools.com/jsref/default.asp" target="_blank">strona </a>o Javascript + DOM,
   - np. korzystając z ww. szablonu Bootstrap, można dodać przycisk z klasą <code>badge-light</code> do strony (np. pod nagłówkiem 'Hello world'):  
 ```html
-      <button type="button" class="btn btn-primary"&gt;
-              Notifications &lt;span class="badge badge-light">&lt;/span&gt;
-      &lt;/button&gt;
+      <button type="button" class="btn btn-primary">
+              Notifications <span class="badge badge-light">&lt;/span&gt;
+      </button>
 ```
   Poniżej, np. przed końcem sekcji <code>body</code> wrzucamy skrypt, który szuka elementu z klasą <code>badge-light</code> i ustawia jego wartość (innerHTML) na liczbę 6:
 ```javascript
