@@ -3,6 +3,15 @@
   background: yellow;
 }
 
+
 p::after {
-  content: " - ja tu tylko na chwilę";
+  content: " - ja tu wpadłem tylko na chwilę";
 }
+
+/*
+p::first-line {
+  font-size: 20px;
+  text-decoration: underline;
+  background-color: lightgreen;
+}
+*/
