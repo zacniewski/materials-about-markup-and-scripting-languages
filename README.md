@@ -31,6 +31,7 @@
   - Javascript on the [W3Schools](https://www.w3schools.com/js/default.asp),  
   - Javascript and [HTML DOM](https://www.w3schools.com/jsref/default.asp),  
   - Kurs [Javascript](https://kursjs.pl/) po polsku, 
+  - Sprawdzenie możliwości [użycia](https://caniuse.com/) wybranych właściwości CSS i metod JS w przeglądarkach.  
 
 ## V. Markdown and Github <a id="paragraph4"></a>
   - Markdown w [pigułce](https://www.markdownguide.org/basic-syntax/),  
