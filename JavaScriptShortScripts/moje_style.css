@@ -1,0 +1,8 @@
+::selection {
+  color: red;
+  background: yellow;
+}
+
+p::after {
+  content: " - ja tu tylko na chwilę";
+}
