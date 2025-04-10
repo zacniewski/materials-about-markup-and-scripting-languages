@@ -87,6 +87,7 @@ document.getElementById("demo").innerHTML = d.getFullYear();
       - w miejscu do którego chcemy się przenieść tworzymy znacznik `a` z atrybutem `id`, czyli np. `<a id="start"></a>`,  
       - tworzymy link do ww. znacznika za pomocą składni `[tekst linku](#id-w-znaczniku-a)`, w naszym przypadku może to być np. [Link do początku dokumentacji](#start).  
 <br>
+  
 #### 3. Inne
   - wpisujemy informacje dotyczące projektu, które uważamy za istotne,  
   - ...
