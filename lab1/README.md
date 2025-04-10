@@ -15,7 +15,7 @@ Do zrealizowania były następujące zadania:
 
 ## VI. Realizacja zadania
 
-1. Kod HTML
+#### 1. Kod HTML
 W zadaniu wykorzystano .... (krótko opisać, co z HTMLa zostało użyte).
 
 Przykładowy kod HTML do pokazania (taki, który uważamy za ciekawy, warty pokazania):  
@@ -36,14 +36,14 @@ Przykładowy kod HTML do pokazania (taki, który uważamy za ciekawy, warty poka
         </body>
 ```
 
-2. Zrzuty ekranu pokazujące wynik działania aplikacji/skryptu/strony HTML:  
+#### 2. Zrzuty ekranu pokazujące wynik działania aplikacji/skryptu/strony HTML:  
 ![obrazek ze zrzutu ekranu](images/dandelion.jpg)
 
-2a. Struktura projektu:  
+#### 2a. Struktura projektu:  
 ![struktura-projektu](images/struktura.png)
 
 
-3. Kod CSS (taki, który uważamy za ciekawy, warty pokazania). 
+#### 3. Kod CSS (taki, który uważamy za ciekawy, warty pokazania). 
 W zadaniu wykorzystano .... (krótko opisać, co z CSSa zostało użyte).
 
 Przykładowy kod CSS do pokazania (taki, który uważamy za ciekawy, warty zaprezentowania):  
@@ -57,7 +57,7 @@ Przykładowy kod CSS do pokazania (taki, który uważamy za ciekawy, warty zapre
   }
 ```
 
-4. Kod Javascript
+#### 4. Kod Javascript
 W zadaniu wykorzystano .... (krótko opisać, co z JSa zostało użyte).
 
 Przykładowy kod JS do pokazania (taki, który uważamy za ciekawy, warty zaprezentowania):  
@@ -69,17 +69,19 @@ document.getElementById("demo").innerHTML = d.getFullYear();
 
 ## VII. Dodatkowe informacje o zadaniu
 
-1. Tabele w Markdownie
+#### 1. Tabele w Markdownie
 
 | Syntax        | Description     |
 |:-------------:|:---------------:|
 |    Header     |      Title      |
 |   Paragraph   |      Text       |
 
-2. Linki
+#### 2. Linki
   - do stron: What is a [markup language](https://www.semrush.com/blog/markup-language/)?
   - do innych sekcji w dokumencie: 
       - w miejscu do którego chcemy się przenieść tworzymy znacznik `a` z atrybutem `id`, czyli np. `<a id="start"></a>`,  
       - tworzymy link do ww. znacznika za pomocą składni `[tekst linku](#id-w-znaczniku-a)`, w naszym przypadku może to być np. [Link do początku dokumentacji](#start).  
 
-3. Inne
+#### 3. Inne
+  - wpisujemy informacje dotyczące projektu, które uważamy za istotne,  
+  - ...
