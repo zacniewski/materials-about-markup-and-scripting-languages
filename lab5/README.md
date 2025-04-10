@@ -8,7 +8,7 @@ Do zrealizowania były następujące zadania:
   - opis zadania nr 1 ...,  
   - opis zadania nr 1 ...,  
 
-## Technologie wykorzystane w zadaniu
+## V. Technologie wykorzystane w zadaniu
   - HTML,  
   - CSS,  
   - Javascript
@@ -72,6 +72,7 @@ document.getElementById("demo").innerHTML = d.getFullYear();
 ```
 
 ## VII. Dodatkowe informacje o zadaniu
+Można tu wpisać informację o elementach, które nie zostały wymienione we wcześniejszych punktach.  
 
 #### 1. Tabele w Markdownie
 
@@ -87,6 +88,7 @@ document.getElementById("demo").innerHTML = d.getFullYear();
       - w miejscu do którego chcemy się przenieść tworzymy znacznik `a` z atrybutem `id`, czyli np. `<a id="start"></a>`,  
       - tworzymy link do ww. znacznika za pomocą składni `[tekst linku](#id-w-znaczniku-a)`, w naszym przypadku może to być np. [Link do początku dokumentacji](#start).  
 <br>
+  
 #### 3. Inne
   - wpisujemy informacje dotyczące projektu, które uważamy za istotne,  
   - ...

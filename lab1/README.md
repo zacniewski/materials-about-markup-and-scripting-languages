@@ -8,7 +8,7 @@ Do zrealizowania były następujące zadania:
   - opis zadania nr 1 ...,  
   - opis zadania nr 1 ...,  
 
-## Technologie wykorzystane w zadaniu
+## V. Technologie wykorzystane w zadaniu
   - HTML,  
   - CSS,  
   - Javascript
@@ -72,6 +72,7 @@ document.getElementById("demo").innerHTML = d.getFullYear();
 ```
 
 ## VII. Dodatkowe informacje o zadaniu
+Można tu wpisać informację o elementach, które nie zostały wymienione we wcześniejszych punktach.  
 
 #### 1. Tabele w Markdownie
 
