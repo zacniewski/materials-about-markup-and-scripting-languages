@@ -5,11 +5,12 @@
         <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
         <meta name="description" content="" />
         <meta name="author" content="" />
-        <title>Bare - Start Bootstrap Template</title>
+        <title>Obsługa zdarzeń</title>
         <!-- Favicon-->
         <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
         <!-- Core theme CSS (includes Bootstrap)-->
         <link href="css/styles.css" rel="stylesheet" />
+        <link href="css/div-style.css" rel="stylesheet" />
     </head>
     <body>
         <!-- Responsive navbar-->
@@ -37,17 +38,43 @@
         <!-- Page content-->
         <div class="container">
             <div class="text-center mt-5">
-                <h1>Witamy grupę z semestru IV - apl. mob. i internetowe</h1>
-                <p class="lead">A complete project boilerplate built with Bootstrap</p>
-                <p>Bootstrap v5.2.3</p>
+                <h1>Lab. nr 3</h1>
+                <p class="lead">"Obsługa zdarzeń za pomocą Javascript"</p>
             </div>
-            <hr>
 
-            <button id="myBtn">Try it</button><br>
-            <input type="text" onkeypress="myFunction()"><br>
-            <input type="text" onfocus="myFunction()"> 
+            <hr>
+            <h3>Zdarzenie 'click'</h3>
+            <button id="myBtn">Zobacz bieżącą datę</button><br>
+            <p id="demoClick"></p>
+
+            <hr>
+            <h3>Zdarzenie 'onfocus'</h3>
+            <input type="text" id='fname'>
+
+            <hr>
+            <h3>Zdarzenie 'onchange'</h3>
+            <p>Wybierz auto z listy!</p>
+
+            <select id="mySelect" onchange="myFunctionChange()">
+              <option value="Audi">Audi</option>
+              <option value="BMW">BMW</option>
+              <option value="Mercedes">Mercedes</option>
+              <option value="Volvo">Volvo</option>
+            </select>
+            <p id="demoSelect"></p>
+
+            <hr>
+            <h3>Zdarzenie 'onkeydown'</h3>
+            <input type="text" onkeydown="myOnKeyDownFunction()">
+            <p id="demoKeyDown"></p>
+
+            <hr>
+            <h3>Zdarzenia 'onmousemove' i 'onmouseout'</h3>
+            <div id="demo-div" onmousemove="myFunctionOnMouseMove(event)" onmouseout="clearCoordinates()"></div>
+            <p id="demoOnMouseMove"></p>
 
         </div>
+
         <!-- Bootstrap core JS-->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
         <!-- Core theme JS-->
