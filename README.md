@@ -49,7 +49,7 @@
   - Pobieranie danych za pomocą metody [fetch()](https://www.w3schools.com/jsref/api_fetch.asp).  
   - Kilka słów o [XML](https://www.samouczekprogramisty.pl/xml-dla-poczatkujacych/),  
   - YAML [tutorial](https://spacelift.io/blog/yaml),  
-  - another [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) tutorial,  
+  - Jeszcze jeden [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) tutorial,  
   - Formaty danch dla [programistów](https://mmazurek.dev/formaty-danych-ktore-powinien-znac-kazdy-programista/).  
 
 ## VII. React <a id="paragraph6"></a>
