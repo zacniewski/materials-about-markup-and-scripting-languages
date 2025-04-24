@@ -41,13 +41,15 @@
   - Książka [GitHub Pro](https://git-scm.com/book/pl/v2) po polsku,  
   - Podstawy [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) na Githubie.  
 
-## VI. XML and JSON <a id="paragraph5"></a>
+## VI. XML, YAML and JSON <a id="paragraph5"></a>
   - XML on the [W3Schools](https://www.w3schools.com/xml/default.asp),  
   - XML [tutorial](https://www.guru99.com/xml-tutorials.html).
   - Oficjalna strona [JSON](https://www.json.org/json-pl.html),    
   - Working with [JSON](https://developer.mozilla.org/en-US/docs/Learn_web_development/Core/Scripting/JSON) on the MDN,  
   - Pobieranie danych za pomocą metody [fetch()](https://www.w3schools.com/jsref/api_fetch.asp).  
   - Kilka słów o [XML](https://www.samouczekprogramisty.pl/xml-dla-poczatkujacych/),  
+  - YAML [tutorial](https://spacelift.io/blog/yaml),  
+  - another [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) tutorial,  
   - Formaty danch dla [programistów](https://mmazurek.dev/formaty-danych-ktore-powinien-znac-kazdy-programista/).  
 
 ## VII. React <a id="paragraph6"></a>
