@@ -43,7 +43,7 @@ function doubleClick() {
 document.getElementById("myBtn").addEventListener("mouseover", displayDate);
 document.getElementById("myBtn").addEventListener("mouseout", clearDate);
 
-document.getElementById("fname").onfocus = function() {myFocusFunction()};
+document.getElementById("fname").addEventListener("focus", myFocusFunction);
 
 document.getElementById("myBtn2").addEventListener("click", singleClick);
 document.getElementById("myBtn2").addEventListener("dblclick", doubleClick);
