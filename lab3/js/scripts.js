@@ -9,7 +9,7 @@ function myFunctionChange() {
 
 
 function myFocusFunction() {
-  document.getElementById("fname").style.backgroundColor = "red";
+  document.getElementById("fname").style.backgroundColor = "yellow";
 }
 
 function myOnKeyDownFunction() {
@@ -27,6 +27,17 @@ function clearCoordinates() {
   document.getElementById("demoOnMouseMove").innerHTML = "";
 }
 
+function singleClick() {
+  document.getElementById("clickInfo").innerHTML = "Kliknąłeś raz!";
+}
+
+function doubleClick() {
+  document.getElementById("clickInfo").innerHTML = "Kliknąłeś dwa razy!";
+}
+
 
 document.getElementById("myBtn").addEventListener("click", displayDate);
 document.getElementById("fname").onfocus = function() {myFocusFunction()};
+
+document.getElementById("myBtn2").addEventListener("click", singleClick);
+document.getElementById("myBtn2").addEventListener("dblclick", doubleClick);
