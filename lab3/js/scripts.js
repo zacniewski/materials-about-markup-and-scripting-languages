@@ -2,6 +2,10 @@ function displayDate() {
   document.getElementById("demoClick").innerHTML = Date();
 }
 
+function clearDate() {
+  document.getElementById("demoClick").innerHTML = '';
+}
+
 function myFunctionChange() {
   let x = document.getElementById("mySelect").value;
   document.getElementById("demoSelect").innerHTML = "Wybrałeś: " + x;
@@ -36,7 +40,9 @@ function doubleClick() {
 }
 
 
-document.getElementById("myBtn").addEventListener("click", displayDate);
+document.getElementById("myBtn").addEventListener("mouseover", displayDate);
+document.getElementById("myBtn").addEventListener("mouseout", clearDate);
+
 document.getElementById("fname").onfocus = function() {myFocusFunction()};
 
 document.getElementById("myBtn2").addEventListener("click", singleClick);
