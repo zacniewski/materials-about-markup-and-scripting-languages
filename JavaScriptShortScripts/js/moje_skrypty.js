@@ -93,3 +93,13 @@ text2.textContent = 'jakiś napis w akapicie';
 container.appendChild(text);
 container.appendChild(przerwa);
 container.appendChild(text2);
+
+// setInterval
+let licznik = 0;
+function napiszCokolwiek() {
+    console.log("Hello JS!");
+    licznik += 1;
+    console.log(licznik);
+}
+
+setInterval(napiszCokolwiek, 1000);
