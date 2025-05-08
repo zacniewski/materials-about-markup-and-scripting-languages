@@ -8,3 +8,13 @@ async function getCountryData(url) {
 
 const country_url = "https://restcountries.com/v3.1/name/Poland";
 getCountryData(country_url);
+
+// do wycieczek
+// pierwszy obiekt
+console.log(wycieczki[0]);
+
+// wszystkie obiekty
+for (i of wycieczki) {
+    console.log(i);
+}
+
