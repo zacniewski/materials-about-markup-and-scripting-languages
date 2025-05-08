@@ -21,25 +21,25 @@
 
 ### 5. Lekcja nr 5
   - kod: [tutaj](lekcja-5/),  
-  - dokumentacja: [tutaj]().  
+  - dokumentacja: [tutaj](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Game_over).  
 
 ### 6. Lekcja nr 6
   - kod: [tutaj](lekcja-6/),  
-  - dokumentacja: [tutaj]().  
+  - dokumentacja: [tutaj](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Build_the_brick_field).  
 
 ### 7. Lekcja nr 7
   - kod: [tutaj](lekcja-7/),  
-  - dokumentacja: [tutaj]().  
+  - dokumentacja: [tutaj](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Collision_detection).  
 
 ### 8. Lekcja nr 8
   - kod: [tutaj](lekcja-8/),  
-  - dokumentacja: [tutaj]().  
+  - dokumentacja: [tutaj](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Track_the_score_and_win).  
 
 ### 9. Lekcja nr 9
   - kod: [tutaj](lekcja-9/),  
-  - dokumentacja: [tutaj]().  
+  - dokumentacja: [tutaj](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Mouse_controls).  
 
 ### 10. Lekcja nr 10
   - kod: [tutaj](lekcja-10/),  
-  - dokumentacja: [tutaj]().  
+  - dokumentacja: [tutaj](https://developer.mozilla.org/en-US/docs/Games/Tutorials/2D_Breakout_game_pure_JavaScript/Finishing_up).  
 
