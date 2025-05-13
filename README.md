@@ -50,6 +50,7 @@
   - Kilka słów o [XML](https://www.samouczekprogramisty.pl/xml-dla-poczatkujacych/),  
   - YAML [tutorial](https://spacelift.io/blog/yaml),  
   - Jeszcze jeden [YAML](https://www.cloudbees.com/blog/yaml-tutorial-everything-you-need-get-started) tutorial,  
+  - I jeszcze jeden [YAML tutorial](https://spacelift.io/blog/yaml),  
   - Formaty danch dla [programistów](https://mmazurek.dev/formaty-danych-ktore-powinien-znac-kazdy-programista/).  
 
 ## VII. React <a id="paragraph6"></a>
