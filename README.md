@@ -164,8 +164,8 @@ lub
 
   - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `car.xml` dla zamiany JSON -> XML,  
   - wyświetlamy dane na stronie HTML (za pomocą znacznika `<pre>`) lub w konsoli przeglądarki,  
-  - umieszczamy dane z wszystkich cztereAML i INI) w dokumentacji laboratorium nr 5,  
-  - aby wyświetlić dane w formacie XML wewnątrz pliku HTML należy wewnątrz znacznika `<pre>` zastąpić każdy znak `<` znakiem specjalnym `&lt;` oraz każdy znak `>` znakiem specjalnym `&gt;`:  
+  - umieszczamy dane dla wszystkich czterech formatów (JSON, XML, YAML i INI) w dokumentacji laboratorium nr 5,  
+  - aby wyświetlić dane w formacie XML wewnątrz pliku HTML, należy wewnątrz znacznika `<pre>` zastąpić każdy znak `<` znakiem specjalnym `&lt;` oraz każdy znak `>` znakiem specjalnym `&gt;`:  
     ```
     <pre>
        &lt;?xml version="1.0" ?&gt;
