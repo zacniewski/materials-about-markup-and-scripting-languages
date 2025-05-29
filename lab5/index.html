@@ -54,6 +54,21 @@
                 <a class="btn btn-primary" id="my_link" href="https://startbootstrap.com/template/bare" target="_blank" role="button">Link</a>
 
                 <hr>
+                <h4>Wersja JSON</h4>
+                <pre>
+                  data = {
+                    'blog_details': {
+                        'blog_url': 'https://mmazurek.dev',
+                        'blog_rate': 10,
+                        'blog_max_rate': 10,
+                        'blog_keywords': ['programowanie', 'python', 'proces', 'tworzenia', 'programowania'],
+                        'additional_info': [None, True, {
+                            "type": ['intresting', 'type']
+                        }]
+                    }
+                }
+                </pre>
+
                 <h4>Wersja z .ini</h4>
                 <pre>
                     [blog]
@@ -64,6 +79,43 @@
                     [blog_keywords]
                     blog_keywords = programowanie,python,proces,tworzenia,programowania
 
+                </pre>
+
+            <h4> Wersja z .yaml</h4>
+            <pre>
+                blog_details:
+                  additional_info:
+                  - null
+                  - true
+                  - type:
+                    - intresting
+                    - type
+                  blog_keywords:
+                  - programowanie
+                  - python
+                  - proces
+                  - tworzenia
+                  - programowania
+                  blog_max_rate: 10
+                  blog_rate: 10
+                  blog_url: https://mmazurek.dev
+            </pre>
+
+            <h4>Wersja z .xml</h4>
+                <pre>
+                   &lt;?xml version="1.0" ?&gt;
+                    &lt;blog&gt;
+                        &lt;blog_url type="str"&gt;https://mmazurek.dev&lt;/blog_url&gt;
+                        &lt;blog_rate type="int"&gt;10&lt;/blog_rate&gt;
+                        &lt;blog_max_rate type="int"&gt;10&lt;/blog_max_rate&gt;
+                        &lt;blog_keywords type="list"&gt;
+                            &lt;item type="str"&gt;programowanie&lt;/item&gt;
+                            &lt;item type="str"&gt;python&lt;/item&gt;
+                            &lt;item type="str"&gt;proces&lt;/item&gt;
+                            &lt;item type="str"&gt;tworzenia&lt;/item&gt;
+                            &lt;item type="str"&gt;programowania&lt;/item&gt;
+                        &lt;/blog_keywords&gt;
+                    &lt;/blog&gt;
                 </pre>
 
 
