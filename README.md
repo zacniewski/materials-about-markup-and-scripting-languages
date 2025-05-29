@@ -160,6 +160,6 @@ lub
     - INI.  
 
   - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `car.xml` dla zamiany JSON -> XML,  
-  - wyświetlamy dane na stronie HTML lub w ostateczności w konsoli przeglądarki.
+  - wyświetlamy dane na stronie HTML (za pomocą znacznika <pre> lub w konsoli przeglądarki.
 > Przewidywany czas: 3 x 2 godz. laboratoryjne.  
 
