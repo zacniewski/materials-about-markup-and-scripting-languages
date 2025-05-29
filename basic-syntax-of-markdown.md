@@ -45,8 +45,8 @@ def suma(a, b):
     return a + b
 ```
 
-![tekst alternatywny](tux.avif)
-![tekst alternatywny](tux.avif)
+![tekst alternatywny](images/tux.avif)
+![tekst alternatywny - celowy błąd w nazwie pliku](images/tuxxxxxxx.avif)
 
 Tincidunt fringilla suspendisse efficitur neque consequat eu. Habitasse quis fusce et cubilia adipiscing iaculis scelerisque. 
 ***
