@@ -154,12 +154,39 @@ lub
     - strona producenta,
     - moc,
     - itp. itd.
-  - ręcznie lub za pomocą kodu z folderu `Data-formats-exercises` zamieniamy dane w formacie JSON na dane w następujących formatach:  
+
+  - w naszych danych startowych możemy stosować tablice, zagnieżdżenia itp.
+
+  - ręcznie lub za pomocą kodu (Python) z folderu `Data-formats-exercises` zamieniamy dane w formacie JSON na dane w następujących formatach:  
     - XML,  
     - YAML,
     - INI.  
 
   - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `car.xml` dla zamiany JSON -> XML,  
-  - wyświetlamy dane na stronie HTML (za pomocą znacznika `<pre>`) lub w konsoli przeglądarki.
+  - wyświetlamy dane na stronie HTML (za pomocą znacznika `<pre>`) lub w konsoli przeglądarki,  
+  - umieszczamy dane z wszystkich cztereAML i INI) w dokumentacji laboratorium nr 5,  
+  - aby wyświetlić dane w formacie XML wewnątrz pliku HTML należy wewnątrz znacznika `<pre>` zastąpić każdy znak `<` znakiem specjalnym `&lt;` oraz każdy znak `>` znakiem specjalnym `&gt;`:  
+    ```
+    <pre>
+       &lt;?xml version="1.0" ?&gt;
+        &lt;blog&gt;
+            &lt;blog_url type="str"&gt;https://mmazurek.dev&lt;/blog_url&gt;
+            &lt;blog_rate type="int"&gt;10&lt;/blog_rate&gt;
+            &lt;blog_max_rate type="int"&gt;10&lt;/blog_max_rate&gt;
+            &lt;blog_keywords type="list"&gt;
+                &lt;item type="str"&gt;programowanie&lt;/item&gt;
+                &lt;item type="str"&gt;python&lt;/item&gt;
+                &lt;item type="str"&gt;proces&lt;/item&gt;
+                &lt;item type="str"&gt;tworzenia&lt;/item&gt;
+                &lt;item type="str"&gt;programowania&lt;/item&gt;
+            &lt;/blog_keywords&gt;
+        &lt;/blog&gt;
+    </pre>
+    ```
+  - aby uruchomić skrypty Pythona z folderu `Data-formats-exercises` należy zainstalować dwa dodatkowe pakiety:  
+
+```bash
+pip install dicttoxml pyyaml
+```
 > Przewidywany czas: 3 x 2 godz. laboratoryjne.  
 
