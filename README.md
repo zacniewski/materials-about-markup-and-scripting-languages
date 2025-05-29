@@ -146,12 +146,20 @@ lub
 > Przewidywany czas: 2 x 2 godz. laboratoryjne.  
 
 ## Lab. nr 5 - "XML i inne formaty wymiany danych"  
-  - korzystamy z pliku `lab5/assets/wycieczki.js`, zawierającego dane w formacie JSON,  
-  - za pomocą kodu JS (w ostateczności ręcznie) zamieniamy dane w formacie JSON na dane w następujących formatach:  
-    - CSV,  
+  - sami tworzymy dane w formacie JSON,  mogą to być informacje dotyczące np. samochodu:  
+    - rocznik, 
+    - marka, 
+    - model, 
+    - przebieg, 
+    - strona producenta,
+    - moc,
+    - itp. itd.
+  - ręcznie lub za pomocą kodu z folderu `Data-formats-exercises` zamieniamy dane w formacie JSON na dane w następujących formatach:  
     - XML,  
-    - YAML
-  - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `wycieczki.xml` dla zamiany JSON -> XML,  
-  - wyświetlamy dane na stronie HTML lub w ostateczności w konsoli przeglądarki.  
+    - YAML,
+    - INI.  
+
+  - dla każdej transformacji formatu tworzymy plik z odpowiednim rozszerzeniem, np. `car.xml` dla zamiany JSON -> XML,  
+  - wyświetlamy dane na stronie HTML lub w ostateczności w konsoli przeglądarki.
 > Przewidywany czas: 3 x 2 godz. laboratoryjne.  
 

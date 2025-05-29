@@ -13,3 +13,23 @@ data = {
 }
 dict_as_yml = safe_dump(data)
 print(dict_as_yml)
+
+'''
+blog_details:
+  additional_info:
+  - null
+  - true
+  - type:
+    - intresting
+    - type
+  blog_keywords:
+  - programowanie
+  - python
+  - proces
+  - tworzenia
+  - programowania
+  blog_max_rate: 10
+  blog_rate: 10
+  blog_url: https://mmazurek.dev
+'''
+

@@ -27,6 +27,8 @@ print(f"{dict_as_xml=}")
 
 """
 
+
+# I w drugą stronę, ale to tylko opcja :)
 xml = parseString(dict_as_xml)
 
 xml_as_dict = {}
