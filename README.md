@@ -126,7 +126,7 @@ lub
     - nazwy wszystkich wycieczek, korzystając z dowolnej wersji pętli for.  
   - w kodzie HTML umieść diva z `id="oferty"`:  
     - napisz funkcję `wyswietlOferte`, która jako argument otrzymuje pojedynczy obiekt (ofertę wycieczki) i zwraca kod HTML,  
-    - zwrócony kod HTML wyświetla: div-a z klasą "oferta" o wymiarach 250 x 150px oraz informacje o wycieczce: nazwę, kraj, rejon, cenę (patrz rysunek poniżej):  
+    - zwrócony kod HTML wyświetla: div-a z klasą "oferta" o wymiarach 250px x 150px (lub innych pasujących użytkownikowi) oraz informacje o wycieczce: nazwę, kraj, rejon, cenę (patrz rysunek poniżej):  
     ![oferty](lab4/assets/oferty.jpg)  
   - wyświetl wycieczki, które odbywają się w Polsce za pomocą funkcji `wyswietlOfertePolska`. Skorzystaj z przygotowanej wcześniej funkcji `wyswietlOferte` i nieco ją zmodyfikuj,  
   - z pliku `wycieczki.js` usuń wycieczkę z ido = 5 i zapisz dane jako nowy plik `wycieczki-2.js`. Wyświetl wycieczki. Skorzystaj z przygotowanej funkcji `wyswietlOferte`,  
