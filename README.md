@@ -39,7 +39,8 @@
   - Początki z [GitHub'em](https://www.flynerd.pl/2018/02/github-dla-zielonych-pierwsze-repozytorium.html),  
   - Github [Pages](https://pages.github.com/),  
   - Książka [GitHub Pro](https://git-scm.com/book/pl/v2) po polsku,  
-  - Podstawy [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) na Githubie.  
+  - Podstawy [Markdown](https://docs.github.com/en/get-started/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax) na Githubie,  
+  - [Quarkdown](https://github.com/iamgio/quarkdown), czyli Markdown na sterydach.    
 
 ## VI. XML, YAML and JSON <a id="paragraph5"></a>
   - XML on the [W3Schools](https://www.w3schools.com/xml/default.asp),  
