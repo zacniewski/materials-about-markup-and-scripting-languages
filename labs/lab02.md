@@ -11,3 +11,5 @@ Praktyczne użycie zmiennych, różnych typów danych oraz operatorów arytmetyc
     - Liczbę znaków.
     - Imię wielkimi literami.
     - Nazwisko małymi literami.
+5. Napisz program, który oblicza resztę z dzielenia dwóch liczb całkowitych podanych przez użytkownika.
+6. Napisz skrypt, który pobiera od użytkownika trzy słowa i łączy je w jedno zdanie, oddzielając je przecinkami, a na końcu stawiając kropkę.

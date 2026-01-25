@@ -9,3 +9,5 @@ Praktyczne tworzenie i edycja plików XML oraz YAML.
 3. Stwórz plik `produkty.csv` z kolumnami: `id, nazwa, cena, ilosc`. Dodaj co najmniej 5 produktów.
 4. Otwórz plik CSV w arkuszu kalkulacyjnym (np. Excel, Google Sheets), zmień ceny i zapisz ponownie jako CSV.
 5. Użyj walidatora online dla XML i YAML, aby upewnić się, że Twoje pliki nie zawierają błędów składniowych.
+6. Napisz strukturę XML, która reprezentuje bibliotekę multimediów (filmy, muzyka) z atrybutami (np. `id`, `gatunek`) dla wybranych elementów.
+7. Stwórz plik YAML, który definiuje strukturę menu dla strony internetowej, zawierający elementy główne oraz podmenu.

@@ -9,3 +9,5 @@ Wprowadzenie interaktywności na stronie za pomocą skryptów JS.
 3. Napisz skrypt, który po najechaniu myszką na obrazek zmieni jego źródło (`src`) na inne (efekt zmiany zdjęcia).
 4. Stwórz prosty kalkulator: dwa pola tekstowe (`<input type="number">`) i przycisk, który po kliknięciu wypisze sumę tych liczb w elemencie `<span>`.
 5. Wykonaj walidację formularza: sprawdź, czy pole "Imię" nie jest puste przed wysłaniem. Jeśli jest puste, wyświetl komunikat błędu na czerwono pod polem.
+6. Napisz skrypt, który dynamicznie zmienia kolor tła strony po kliknięciu wybranego przycisku.
+7. Zaimplementuj funkcjonalność "Listy zadań" (To-Do List): pole tekstowe do wpisywania zadania oraz przycisk "Dodaj", który dopisuje nową pozycję do listy `<ul>` na stronie.

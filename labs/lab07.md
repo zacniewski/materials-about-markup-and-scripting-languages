@@ -9,3 +9,5 @@ Bezpieczne otwieranie plików i obsługa błędów.
 3. Napisz program, który odczytuje plik `liczby.txt` i oblicza sumę zawartych w nim liczb. Obsłuż błąd `ValueError` (jeśli w pliku będzie tekst zamiast liczby).
 4. Napisz skrypt kopiujący zawartość jednego pliku tekstowego do drugiego.
 5. Stwórz prosty dziennik: użytkownik podaje tekst, a program dopisuje go do pliku `log.txt` wraz z aktualną datą i godziną (użyj modułu `datetime`).
+6. Napisz program, który zlicza liczbę słów w podanym pliku tekstowym.
+7. Napisz skrypt, który szuka określonego ciągu znaków we wszystkich liniach pliku i wypisuje tylko te linie, które go zawierają.

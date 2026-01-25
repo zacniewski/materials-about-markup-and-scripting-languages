@@ -46,3 +46,5 @@ deactivate
 3. Stwórz plik `hello.py`, który wypisze w konsoli "Witaj w Pythonie".
 4. Uruchom skrypt komendą `python hello.py`.
 5. Wygeneruj plik `requirements.txt`.
+6. Sprawdź wersję zainstalowanego Pythona i biblioteki `requests` za pomocą odpowiednich poleceń w terminalu.
+7. Zdezaktywuj środowisko wirtualne i spróbuj uruchomić skrypt `hello.py` ponownie, obserwując czy coś się zmieniło.

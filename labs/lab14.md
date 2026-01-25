@@ -9,3 +9,5 @@ Automatyzacja pracy z danymi tabelarycznymi i obiektowymi.
 3. Napisz program, który zamieni plik `produkty.csv` na format JSON i zapisze go jako `produkty.json`.
 4. Mając plik JSON z listą użytkowników, napisz skrypt, który wypisze imiona użytkowników posortowane alfabetycznie.
 5. Napisz skrypt, który pobiera dane pogodowe w formacie JSON dla wybranego miasta (użyj np. OpenWeatherMap API lub statycznego pliku JSON) i wypisuje aktualną temperaturę.
+6. Napisz program, który odczytuje plik CSV i zlicza, ile razy każda wartość występuje w określonej kolumnie (np. ile produktów należy do danej kategorii).
+7. Stwórz skrypt, który łączy dane z dwóch plików: `uzytkownicy.json` oraz `zamowienia.csv` na podstawie wspólnego pola `id_uzytkownika`.

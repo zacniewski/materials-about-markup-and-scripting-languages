@@ -10,3 +10,5 @@ Zaawansowana manipulacja danymi XML/YAML oraz stworzenie uniwersalnego konwerter
    Napisz skrypt w Pythonie, który przyjmuje dwa argumenty linii komend: plik wejściowy (CSV) i format wyjściowy (JSON lub YAML). Program powinien dokonać konwersji i zapisać wynik do nowego pliku.
 4. Dodaj do konwertera obsługę błędów (np. brak pliku wejściowego, nieobsługiwany format wyjściowy).
 5. Przygotuj krótką dokumentację swojego skryptu w formacie Markdown (plik `DOKUMENTACJA.md`).
+6. Rozbuduj konwerter o możliwość konwersji w drugą stronę: z formatu JSON do CSV.
+7. Napisz testy jednostkowe (używając modułu `unittest` lub `pytest`) dla kluczowych funkcji konwertera danych.
