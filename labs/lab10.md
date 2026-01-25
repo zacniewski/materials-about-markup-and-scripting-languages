@@ -1,0 +1,12 @@
+# Laboratorium 10: Flask – Tworzenie dynamicznych stron
+
+## Cel zajęć
+Uruchomienie lokalnego serwera WWW i renderowanie szablonów HTML.
+
+## Zadania
+1. Zainstaluj bibliotekę Flask: `pip install flask`.
+2. Stwórz minimalną aplikację `app.py`, która wyświetla "Witaj w aplikacji Flask" na stronie głównej.
+3. Stwórz folder `templates` i plik `index.html`. Użyj funkcji `render_template`, aby wyświetlić ten plik we Flasku.
+4. Przekaż do szablonu zmienną `tytul` i wyświetl ją za pomocą składni Jinja2: `{{ tytul }}`.
+5. Stwórz listę swoich ulubionych filmów w Pythonie i przekaż ją do szablonu. Wyświetl listę za pomocą pętli `{% for %}` w HTML.
+6. Dodaj drugi widok pod adresem `/kontakt`, który wyświetli prosty formularz HTML.
