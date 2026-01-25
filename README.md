@@ -19,7 +19,7 @@ Przykłady: HTML, XML, Markdown.
 
 ## Spis treści
 
-### Wykłady (Folder `docs`)
+### Wykłady (Folder `lectures`)
 1.  **W1: Wstęp do Pythona** – Historia, instalacja, pierwsze kroki.
 2.  **W2: Podstawowe typy danych i operatory** – Liczby, ciągi znaków, operacje logiczne.
 3.  **W3: Struktury kontrolne** – Instrukcje warunkowe i pętle.
