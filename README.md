@@ -38,17 +38,17 @@ Przykłady: HTML, XML, Markdown.
 
 ### Laboratoria (Folder `labs`)
 1.  **L1: Środowisko pracy** – Instalacja Pythona, venv, pip, pierwszy skrypt.
-2.  **L2: Podstawy składni** – Kalkulator, manipulacja stringami.
+2.  **L2: Podstawy składni** – Przetwarzanie danych liczbowych i tekstowych.
 3.  **L3: Logika programu** – Algorytmy z pętlami i warunkami.
 4.  **L4: Praca z kolekcjami** – Analiza danych w listach i słownikach.
 5.  **L5: Tworzenie modułów** – Organizacja kodu w funkcje.
 6.  **L6: Modelowanie obiektowe** – Implementacja prostych klas.
-7.  **L7: Przetwarzanie plików** – Logi systemowe i proste bazy tekstowe.
+7.  **L7: Przetwarzanie plików** – Operacje na plikach: przetwarzanie danych tekstowych i strukturalnych.
 8.  **L8: Dokumentacja i proste strony** – Tworzenie dokumentu w Markdown i HTML.
 9.  **L9: Stylowanie stron** – Projektowanie layoutu w CSS.
 10. **L10: Pierwsza aplikacja Flask** – Dynamiczna strona WWW.
 11. **L11: Interaktywność z JS** – Walidacja formularzy po stronie klienta.
 12. **L12: JSON w praktyce** – Komunikacja między skryptami.
-13. **L13: Tworzenie plików konfiguracyjnych** – XML vs YAML vs CSV.
-14. **L14: Ekstrakcja danych** – Skrypt przetwarzający duże pliki CSV i JSON.
-15. **L15: Integracja formatów** – Konwerter formatów danych w Pythonie.
+13. **L13: Ekstrakcja danych** – Skrypt przetwarzający pliki CSV, JSON, XML i YAML.
+14. **L14: Kolokwium praktyczne 1** – Sprawdzian z podstaw Pythona i OOP.
+15. **L15: Kolokwium praktyczne 2** – Sprawdzian z technologii webowych i formatów danych.
