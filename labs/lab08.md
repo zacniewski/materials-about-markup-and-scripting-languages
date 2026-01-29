@@ -4,6 +4,8 @@
 Praktyczne tworzenie dokumentów przy użyciu języków znaczników.
 
 ## Zadania
+*Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
+
 1. Stwórz plik `O_mnie.md` w formacie Markdown. Powinien zawierać:
     - Nagłówek z Twoim imieniem.
     - Krótki opis Twoich zainteresowań (pogrubienie).
@@ -18,3 +20,7 @@ Praktyczne tworzenie dokumentów przy użyciu języków znaczników.
 4. Wykorzystaj walidator [W3C HTML Validator](https://validator.w3.org/), aby sprawdzić poprawność swojego kodu HTML.
 5. W pliku Markdown dodaj blok kodu z przykładem prostego skryptu w języku Python oraz listę zadań (task list) do wykonania w tym tygodniu.
 6. Stwórz w HTML formularz kontaktowy zawierający pola: Imię (text), Email (email), Temat (select) oraz Wiadomość (textarea).
+7. Dodaj do dokumentu Markdown cytat oraz linię poziomą oddzielającą sekcje.
+8. W HTML zaimplementuj menu nawigacyjne (`<nav>`) z linkami do różnych sekcji strony (użyj kotwic `#id`).
+9. Dodaj do strony HTML stopkę (`<footer>`) z informacją o prawach autorskich oraz aktualnym rokiem.
+10. Stwórz prosty diagram Mermaid w Markdown, przedstawiający hierarchię plików w Twoim projekcie.

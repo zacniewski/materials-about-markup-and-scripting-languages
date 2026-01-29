@@ -41,6 +41,8 @@ deactivate
 ---
 
 ## 3. Zadania do wykonania
+*Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
+
 1. Utwórz wirtualne środowisko w nowym folderze.
 2. Aktywuj je i zainstaluj bibliotekę `requests` (`pip install requests`).
 3. Stwórz plik `hello.py`, który wypisze w konsoli "Witaj w Pythonie".
@@ -48,3 +50,6 @@ deactivate
 5. Wygeneruj plik `requirements.txt`.
 6. Sprawdź wersję zainstalowanego Pythona i biblioteki `requests` za pomocą odpowiednich poleceń w terminalu.
 7. Zdezaktywuj środowisko wirtualne i spróbuj uruchomić skrypt `hello.py` ponownie, obserwując czy coś się zmieniło.
+8. Usuń folder `venv` i spróbuj go ponownie utworzyć z inną nazwą, np. `.my_env`.
+9. Zainstaluj bibliotekę `pandas` w nowym środowisku i sprawdź czas instalacji.
+10. Stwórz prosty skrypt, który pobierze dane od użytkownika (imię) i wyświetli powitanie "Cześć [imię], gratulacje z okazji konfiguracji środowiska!".
