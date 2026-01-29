@@ -1,44 +1,93 @@
 # Wykład 9: Podstawy CSS
 
 ## 1. Co to jest CSS?
-CSS (Cascading Style Sheets) to kaskadowe arkusze stylów używane do opisu wyglądu dokumentu HTML. Rozdzielają strukturę (HTML) od prezentacji (CSS).
+CSS (Cascading Style Sheets) to kaskadowe arkusze stylów używane do opisu prezentacji dokumentu HTML. Pozwalają one na zmianę kolorów, czcionek, układu elementów (layoutu) oraz dodawanie animacji.
 
-## 2. Metody dołączania stylów
-1. **Zewnętrzne:** `<link rel="stylesheet" href="style.css">`
-2. **Wewnętrzne:** `<style> p { color: red; } </style>`
-3. **Liniowe (Inline):** `<p style="color: blue;">`
+### Kaskadowość i Specyficzność:
+- **Kaskadowość:** Jeśli do tego samego elementu odnoszą się sprzeczne reguły, CSS rozstrzyga, która ma pierwszeństwo na podstawie źródła i ważności.
+- **Specyficzność:** Selektory mają różną "wagę". Identyfikator (`#`) jest ważniejszy niż klasa (`.`), a klasa ważniejsza niż tag.
 
-## 3. Selektory, właściwości i wartości
+## 2. Selektory i kaskada
 ```css
-/* Selektor */
-h1 {
-    /* Właściwość: wartość; */
-    color: darkblue;
-    font-size: 24px;
-    text-align: center;
+/* Selektor elementu - dotyczy wszystkich <h2> */
+h2 {
+    color: #2c3e50;
+    font-family: Arial, sans-serif;
+}
+
+/* Selektor klasy - można używać wielokrotnie */
+.highlight {
+    background-color: yellow;
+    font-weight: bold;
+}
+
+/* Selektor identyfikatora - unikalny na stronie */
+#main-header {
+    border-bottom: 2px solid black;
+}
+
+/* Pseudoklasy - style zależne od stanu */
+a:hover {
+    color: red;
+    text-decoration: underline;
 }
 ```
 
-### Typy selektorów:
-- **Elementu:** `p { ... }` (wszystkie akapity)
-- **Klasy:** `.moja-klasa { ... }` (elementy z `class="moja-klasa"`)
-- **Identyfikatora:** `#moje-id { ... }` (element z `id="moje-id"`)
+## 3. Model Pudełkowy (Box Model)
+Zrozumienie modelu pudełkowego jest kluczowe dla poprawnego układania elementów.
 
-## 4. Model Pudełkowy (Box Model)
-Każdy element HTML jest traktowany jako prostokątne pudełko.
+- **Content:** Sama treść (tekst, obraz).
+- **Padding:** Przezroczysty obszar wokół treści, wewnątrz obramowania.
+- **Border:** Obramowanie wokół paddingu.
+- **Margin:** Przezroczysty obszar na zewnątrz obramowania, oddzielający element od innych.
 
-```mermaid
-graph TD
-    A[Margin - margines zewnętrzny] --> B[Border - obramowanie]
-    B --> C[Padding - margines wewnętrzny]
-    C --> D[Content - treść]
+### Box-sizing:
+Domyślnie `width` i `height` dotyczą tylko treści. Użycie `box-sizing: border-box;` sprawia, że padding i border są wliczane w podaną szerokość, co ułatwia projektowanie.
+
+```css
+div {
+    width: 300px;
+    padding: 20px;
+    border: 5px solid gray;
+    margin: 10px;
+    box-sizing: border-box; /* Szerokość całkowita to nadal 300px */
+}
 ```
 
-## 5. Przykładowa tabela jednostek
-| Jednostka | Opis |
-|-----------|------|
-| `px` | Piksele (wartość stała) |
-| `%` | Procent rodzica |
-| `em` | Wielokrotność rozmiaru czcionki rodzica |
-| `rem` | Wielokrotność rozmiaru czcionki elementu głównego (`<html>`) |
-| `vh` / `vw` | Procent wysokości/szerokości okna przeglądarki |
+## 4. Układanie elementów (Layout)
+Współczesny CSS oferuje potężne narzędzia do tworzenia layoutów:
+
+### Flexbox (Flexible Box Layout):
+Idealny do jednowymiarowych układów (rzędy lub kolumny).
+```css
+.container {
+    display: flex;
+    justify-content: space-between; /* Rozmieszczenie w poziomie */
+    align-items: center;            /* Centrowanie w pionie */
+}
+```
+
+### CSS Grid:
+Idealny do dwuwymiarowych, bardziej złożonych układów.
+```css
+.grid-container {
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr; /* Trzy kolumny o różnych proporcjach */
+    gap: 10px;
+}
+```
+
+## 5. Kolory i jednostki
+### Kolory:
+- Nazwane: `red`, `blue`
+- Hex: `#ff0000`, `#333`
+- RGB/RGBA: `rgb(255, 0, 0)`, `rgba(0, 0, 0, 0.5)` (z przezroczystością)
+
+### Jednostki:
+| Jednostka | Typ | Opis |
+|-----------|-----|------|
+| `px` | Stała | Piksele |
+| `%` | Relatywna | Procent elementu nadrzędnego |
+| `em` | Relatywna | Zależna od rozmiaru czcionki elementu |
+| `rem` | Relatywna | Zależna od rozmiaru czcionki elementu `<html>` |
+| `vh` / `vw` | Relatywna | 1% wysokości/szerokości okna (viewport) |

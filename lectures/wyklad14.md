@@ -1,45 +1,70 @@
-# Wykład 14: Manipulacja danymi w Pythonie (część 1)
+# Wykład 14: Biblioteki zewnętrzne i zarządca pakietów pip
 
-## 1. Praca z formatem CSV
-Python posiada wbudowany moduł `csv`.
+## 1. Co to jest pip?
+`pip` (Package Installer for Python) to standardowy system zarządzania pakietami dla Pythona. Pozwala on na instalowanie i zarządzanie dodatkowymi bibliotekami, które nie są częścią biblioteki standardowej.
 
-### Odczyt CSV:
-```python
-import csv
+### Podstawowe komendy:
+```bash
+# Instalacja pakietu
+pip install nazwa_pakietu
 
-with open('dane.csv', mode='r', encoding='utf-8') as f:
-    reader = csv.DictReader(f)
-    for row in reader:
-        print(row['Imię'], row['Nazwisko'])
+# Instalacja konkretnej wersji
+pip install requests==2.28.1
+
+# Odinstalowanie
+pip uninstall nazwa_pakietu
+
+# Lista zainstalowanych pakietów
+pip list
 ```
 
-## 2. Praca z formatem JSON
-Wbudowany moduł `json` pozwala na łatwą konwersję między słownikami Pythona a tekstem JSON.
+## 2. Plik `requirements.txt`
+W profesjonalnych projektach listę wszystkich zależności zapisuje się w pliku `requirements.txt`. Dzięki temu inni programiści mogą zainstalować wszystkie potrzebne biblioteki jedną komendą.
 
-### Serializacja (Python -> JSON):
-```python
-import json
+### Generowanie i używanie:
+```bash
+# Zapisanie bieżących pakietów do pliku
+pip freeze > requirements.txt
 
-dane = {"id": 1, "status": "OK"}
-json_string = json.dumps(dane, indent=4)
-print(json_string)
+# Instalacja wszystkiego z pliku
+pip install -r requirements.txt
 ```
 
-### Deserializacja (JSON -> Python):
-```python
-import json
+## 3. Środowiska wirtualne (`venv`)
+Środowisko wirtualne pozwala na odizolowanie zależności różnych projektów. Zapobiega to konfliktom wersji (np. Projekt A wymaga Django 3, a Projekt B wymaga Django 4).
 
-tekst_json = '{"id": 1, "status": "OK"}'
-slownik = json.loads(tekst_json)
-print(slownik["status"])
+### Tworzenie i aktywacja:
+```bash
+# Utworzenie środowiska w folderze .venv
+python -m venv .venv
+
+# Aktywacja (Windows)
+.venv\Scripts\activate
+
+# Aktywacja (Linux/macOS)
+source .venv/bin/activate
+
+# Deaktywacja
+deactivate
 ```
 
-## 3. Porównanie typów danych
-| JSON | Python |
-|------|--------|
-| `object` | `dict` |
-| `array` | `list` |
-| `string` | `str` |
-| `number` | `int` / `float` |
-| `true` / `false` | `True` / `False` |
-| `null` | `None` |
+## 4. Popularne biblioteki zewnętrzne
+| Biblioteka | Zastosowanie |
+|------------|--------------|
+| `requests` | Obsługa zapytań HTTP |
+| `pandas` | Analiza i manipulacja danymi |
+| `numpy` | Obliczenia numeryczne i macierzowe |
+| `flask` / `django` | Tworzenie aplikacji webowych |
+| `pytest` | Testowanie kodu |
+| `pillow` | Przetwarzanie obrazów |
+
+## 5. Korzystanie z biblioteki zewnętrznej (przykład koncepcyjny)
+```python
+# import requests
+
+# try:
+#     response = requests.get("https://www.google.com")
+#     print(f"Status: {response.status_code}")
+# except Exception as e:
+#     print(f"Błąd: {e}")
+```

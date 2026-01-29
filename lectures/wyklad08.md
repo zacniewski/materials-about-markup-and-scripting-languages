@@ -1,45 +1,65 @@
 # Wykład 8: Wstęp do HTML i Markdown
 
 ## 1. Język Markdown
-Markdown to lekki język znaczników służący do formatowania tekstu za pomocą prostej składni tekstowej. Został stworzony, aby być maksymalnie czytelnym dla człowieka nawet w formie nieprzetworzonej.
+Markdown to lekki język znaczników służący do formatowania tekstu za pomocą prostej składni tekstowej. Jest szeroko stosowany w dokumentacji (np. README na GitHubie), na forach (StackOverflow) oraz w komunikatorach (Slack, Discord).
 
-### Podstawowa składnia Markdown:
+### Rozszerzona składnia Markdown:
 | Efekt | Składnia |
 |-------|----------|
-| Nagłówek 1 | `# Nagłówek` |
-| Pogrubienie | `**tekst**` |
-| Kursywa | `*tekst*` |
-| Lista punktowana | `- element` |
-| Link | `[tekst](url)` |
-| Kod inline | `` `kod` `` |
+| Nagłówek 2 | `## Nagłówek` |
+| Przekreślenie | `~~tekst~~` |
+| Cytat | `> tekst` |
+| Blok kodu | ` ```python ... ``` ` |
+| Tabela | `| nagłówek | ... |` |
+| Lista numerowana | `1. element` |
+| Zadanie (Checkbox) | `- [x] zadanie` |
+
+### Przykład tabeli w Markdown:
+```markdown
+| Produkt | Cena | Dostępność |
+|---------|------|------------|
+| Chleb   | 5.00 | Tak        |
+| Mleko   | 3.50 | Nie        |
+```
 
 ---
 
 ## 2. Język HTML (HyperText Markup Language)
-HTML jest standardowym językiem znaczników służącym do tworzenia struktury stron internetowych.
+HTML jest szkieletem strony internetowej. Definiuje on strukturę i semantykę treści, ale nie jej wygląd (tym zajmuje się CSS).
 
-### Struktura dokumentu HTML5:
+### Semantyka w HTML5:
+Współczesny HTML stawia na semantykę, czyli używanie tagów, które opisują swoją rolę w dokumencie:
+- `<header>`: Nagłówek strony/sekcji.
+- `<nav>`: Menu nawigacyjne.
+- `<main>`: Główna treść dokumentu.
+- `<article>`: Samodzielna treść (np. wpis na blogu).
+- `<section>`: Tematyczna sekcja dokumentu.
+- `<footer>`: Stopka strony.
+
+### Przykład listy i linku:
 ```html
-<!DOCTYPE html>
-<html lang="pl">
-<head>
-    <meta charset="UTF-8">
-    <title>Moja Strona</title>
-</head>
-<body>
-    <h1>Witaj Świecie!</h1>
-    <p>To jest akapit tekstu.</p>
-</body>
-</html>
+<nav>
+    <ul>
+        <li><a href="index.html">Strona główna</a></li>
+        <li><a href="o-nas.html">O nas</a></li>
+        <li><a href="kontakt.html" target="_blank">Kontakt (nowa karta)</a></li>
+    </ul>
+</nav>
 ```
 
-### Podstawowe tagi:
-- `<h1>` do `<h6>`: Nagłówki.
-- `<p>`: Akapit.
-- `<a>`: Hiperłącze.
-- `<img>`: Obraz.
-- `<ul>`, `<li>`: Listy wypunktowane.
-- `<div>`, `<span>`: Kontenery.
+### Formularze w HTML:
+```html
+<form action="/submit" method="POST">
+    <label for="name">Imię:</label>
+    <input type="text" id="name" name="user_name" required>
+    
+    <label>Płeć:</label>
+    <input type="radio" name="gender" value="m"> M
+    <input type="radio" name="gender" value="k"> K
+    
+    <button type="submit">Wyślij</button>
+</form>
+```
 
 ## 3. Drzewo DOM (Document Object Model)
 Przeglądarka interpretuje kod HTML jako strukturę drzewiastą.

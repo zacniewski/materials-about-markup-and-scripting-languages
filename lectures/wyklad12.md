@@ -1,43 +1,56 @@
 # Wykład 12: Format JSON
 
 ## 1. Co to jest JSON?
-JSON (JavaScript Object Notation) to lekki format wymiany danych. Jest łatwy do odczytu i zapisu dla ludzi oraz łatwy do analizowania i generowania dla maszyn.
+JSON (JavaScript Object Notation) to lekki format wymiany danych, niezależny od języka programowania. Stał się standardem w komunikacji między systemami (API) ze względu na swoją prostotę i czytelność.
 
-## 2. Struktura JSON
-JSON opiera się na dwóch strukturach:
-- Zbiór par nazwa/wartość (obiekt).
-- Uporządkowana lista wartości (tablica).
+### Zasady składni JSON:
+- Dane są w parach nazwa/wartość.
+- Nazwy (klucze) muszą być w podwójnym cudzysłowie.
+- Dane są oddzielone przecinkami.
+- Nawiasy klamrowe `{}` trzymają obiekty.
+- Nawiasy kwadratowe `[]` trzymają tablice.
 
-### Przykład:
-```json
-{
-  "uzytkownik": "jan_kowalski",
-  "wiek": 30,
-  "czy_aktywny": true,
-  "role": ["admin", "user"],
-  "adres": {
-    "miasto": "Warszawa",
-    "kod": "00-001"
-  }
+## 2. Obsługa JSON w Pythonie
+Python posiada wbudowany moduł `json`, który pozwala na łatwą konwersję między formatem JSON a słownikami/listami Pythona.
+
+```python
+import json
+
+# Dane w formacie słownika Pythona
+dane = {
+    "imie": "Marek",
+    "osiagniecia": [10, 25, 40],
+    "premium": False
 }
+
+# 1. Serializacja: Słownik -> Tekst JSON
+json_string = json.dumps(dane, indent=4)
+print(json_string)
+
+# 2. Deserializacja: Tekst JSON -> Słownik
+slownik = json.loads(json_string)
+print(slownik["imie"]) # Marek
 ```
 
-## 3. Typy danych w JSON
-| Typ | Opis | Przykład |
-|-----|------|----------|
-| `string` | Ciąg znaków w cudzysłowie | `"tekst"` |
-| `number` | Liczba | `123.45` |
-| `object` | Zbiór par klucz-wartość | `{...}` |
-| `array` | Lista wartości | `[...]` |
-| `boolean` | Wartość logiczna | `true` / `false` |
-| `null` | Pusta wartość | `null` |
+## 3. Praca z plikami JSON
+Możemy zapisywać i odczytywać dane JSON bezpośrednio z plików za pomocą funkcji `dump` i `load`.
 
-## 4. JSON a JavaScript
-W JavaScript do obsługi JSON służy wbudowany obiekt `JSON`:
-- `JSON.stringify(obj)`: Zamienia obiekt JS na tekst JSON.
-- `JSON.parse(tekst)`: Zamienia tekst JSON na obiekt JS.
+```python
+# Zapis do pliku
+with open("config.json", "w") as f:
+    json.dump(dane, f)
 
-## 5. Zastosowania
-- Komunikacja między klientem a serwerem (API REST).
-- Pliki konfiguracyjne.
-- Przechowywanie danych o prostej strukturze.
+# Odczyt z pliku
+with open("config.json", "r") as f:
+    wczytane_dane = json.load(f)
+```
+
+## 4. JSON a REST API (Przykład koncepcyjny)
+Większość nowoczesnych usług internetowych komunikuje się za pomocą JSON. Chociaż Python wymaga biblioteki `requests` do wygodnej obsługi HTTP, sam format JSON pozostaje taki sam.
+
+```python
+# Przykład użycia biblioteki requests (wymaga instalacji: pip install requests)
+# import requests
+# response = requests.get("https://api.github.com/users/python")
+# data = response.json()
+```

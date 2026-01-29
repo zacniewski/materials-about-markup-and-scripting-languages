@@ -1,45 +1,66 @@
-# Wykład 15: Manipulacja danymi w Pythonie (część 2)
+# Wykład 15: Dobre praktyki, styl kodu i podsumowanie
 
-## 1. Praca z XML
-Do obsługi XML w Pythonie najczęściej używa się modułu `xml.etree.ElementTree`.
+## 1. PEP 8 – Styl kodu w Pythonie
+PEP 8 (Python Enhancement Proposal 8) to oficjalny przewodnik po stylu kodowania w Pythonie. Jego celem jest poprawa czytelności kodu.
 
-### Parsowanie XML:
+### Kluczowe zasady:
+- **Wcięcia:** 4 spacje (nie tabulatory).
+- **Długość linii:** Maksymalnie 79 znaków.
+- **Nazewnictwo:**
+    - Funkcje i zmienne: `snake_case`.
+    - Klasy: `PascalCase` (lub `CapWords`).
+    - Stałe: `UPPER_CASE_WITH_UNDERSCORES`.
+- **Importy:** Zawsze na początku pliku, pogrupowane (standardowe, zewnętrzne, lokalne).
+
+## 2. Dokumentowanie kodu (Docstrings)
+Dobre funkcje i klasy powinny zawierać opisy zawarte w potrójnym cudzysłowie.
+
 ```python
-import xml.etree.ElementTree as ET
+def oblicz_podatek(kwota, stawka=0.23):
+    """
+    Oblicza wartość podatku VAT dla podanej kwoty.
 
-tree = ET.parse('dane.xml')
-root = tree.getroot()
+    Args:
+        kwota (float): Kwota netto.
+        stawka (float): Stawka podatku (domyślnie 0.23).
 
-for pracownik in root.findall('pracownik'):
-    imie = pracownik.find('imie').text
-    print(imie)
+    Returns:
+        float: Wartość podatku.
+    """
+    return kwota * stawka
 ```
 
-## 2. Praca z YAML
-Obsługa YAML wymaga zewnętrznej biblioteki `PyYAML`.
+## 3. Zasada Zen Pythona
+Możesz ją wyświetlić w konsoli wpisując `import this`. Główne założenia:
+- Piękne jest lepsze niż brzydkie.
+- Wyraźne jest lepsze niż domyślne.
+- Proste jest lepsze niż złożone.
+- Czytelność ma znaczenie.
 
-### Odczyt YAML:
+## 4. Testowanie kodu (Podstawy)
+Testy jednostkowe pomagają upewnić się, że kod działa poprawnie po wprowadzeniu zmian.
+
 ```python
-import yaml # Wymaga pip install pyyaml
+# Przykład prostego testu przy użyciu assert
+def suma(a, b):
+    return a + b
 
-with open('config.yaml', 'r') as f:
-    config = yaml.safe_load(f)
-    print(config['server']['port'])
+assert suma(2, 2) == 4
+assert suma(-1, 1) == 0
+print("Wszystkie testy przeszły!")
 ```
 
-## 3. Schemat przetwarzania danych
-Zazwyczaj proces wygląda następująco:
-```mermaid
-graph LR
-    A[Plik wejściowy] --> B[Parser Python]
-    B --> C[Obiekty Python - dict/list]
-    C --> D[Przetwarzanie danych]
-    D --> E[Generator wyjściowy]
-    E --> F[Plik wynikowy]
-```
+## 5. Podsumowanie kursu
+W trakcie tego kursu poznaliśmy:
+1.  **Fundamenty programowania** w Pythonie (typy, pętle, funkcje).
+2.  **Paradygmat obiektowy** (klasy, dziedziczenie).
+3.  **Języki znaczników** i prezentacji treści (Markdown, HTML, CSS).
+4.  **Wymianę danych** (JSON, XML, CSV, YAML).
+5.  **Tworzenie aplikacji webowych** (Flask, JavaScript).
+6.  **Profesjonalne narzędzia** (pip, venv, dobre praktyki).
 
-## 4. Wybór formatu
-- Jeśli masz dane tabelaryczne -> **CSV**.
-- Jeśli potrzebujesz prostego API -> **JSON**.
-- Jeśli potrzebujesz czytelnej konfiguracji -> **YAML**.
-- Jeśli musisz wspierać stare systemy korporacyjne -> **XML**.
+### Co dalej?
+- Eksploracja bibliotek do nauki o danych: **Pandas**, **Matplotlib**.
+- Tworzenie bardziej zaawansowanych stron w **Django**.
+- Automatyzacja zadań systemowych.
+- Nauka systemów kontroli wersji: **Git**.

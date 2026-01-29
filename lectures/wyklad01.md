@@ -1,12 +1,19 @@
 # Wykład 1: Wstęp do języka Python
 
 ## 1. Co to jest Python?
-Python to język programowania wysokiego poziomu, ogólnego przeznaczenia, o dynamicznym typowaniu i interpretowalnym charakterze. Został stworzony przez Guido van Rossuma i wydany po raz pierwszy w 1991 roku.
+Python to język programowania wysokiego poziomu, ogólnego przeznaczenia, o dynamicznym typowaniu i interpretowalnym charakterze. Został stworzony przez Guido van Rossuma i wydany po raz pierwszy w 1991 roku. Nazwa języka nie pochodzi od węża, lecz od brytyjskiej grupy komediowej Monty Python.
+
+### Dlaczego Python?
+- **Łatwość nauki:** Składnia jest prosta i intuicyjna, co sprawia, że jest to idealny język dla początkujących.
+- **Wszechstronność:** Stosowany w web developmencie (Django, Flask), nauce o danych (Pandas, NumPy), sztucznej inteligencji (TensorFlow, PyTorch), automatyzacji i wielu innych dziedzinach.
+- **Ogromna społeczność:** Tysiące bibliotek i gotowych rozwiązań dostępnych w repozytorium PyPI.
 
 ### Kluczowe cechy Pythona:
-- **Czytelność:** Składnia przypominająca język angielski.
+- **Czytelność:** Składnia przypominająca język angielski, kładąca nacisk na czytelność kodu (PEP 8).
+- **Dynamiczne typowanie:** Typ zmiennej jest określany w czasie wykonywania programu.
+- **Zarządzanie pamięcią:** Automatyczne odśmiecanie pamięci (Garbage Collection).
 - **Wieloparadygmatowość:** Wspiera programowanie obiektowe, strukturalne i funkcyjne.
-- **Bogata biblioteka standardowa:** "Batteries included".
+- **Bogata biblioteka standardowa:** "Batteries included" – gotowe narzędzia do wielu zadań wbudowane w język.
 - **Przenośność:** Działa na Windows, Linux, macOS.
 
 ## 2. Historia i wersje
@@ -37,6 +44,27 @@ graph LR
 - Zalecane środowiska (IDE): PyCharm, VS Code, Jupyter Notebook.
 
 ## 5. Pierwszy skrypt
+Poniżej znajduje się klasyczny przykład programu "Hello World" oraz nieco bardziej rozbudowany przykład interaktywny.
+
 ```python
+# Klasyczny przykład
 print("Witaj w świecie Pythona!")
+
+# Przykład interaktywny
+imie = input("Jak masz na imię? ")
+rok_urodzenia = int(input("W którym roku się urodziłeś? "))
+wiek = 2026 - rok_urodzenia
+
+print(f"Cześć {imie}! Masz (lub będziesz mieć w tym roku) {wiek} lat.")
+```
+
+### Tryb interaktywny (REPL)
+Python oferuje również tryb interaktywny, w którym można wpisywać polecenia bezpośrednio w konsoli i natychmiast otrzymywać wynik. Jest to doskonałe narzędzie do testowania krótkich fragmentów kodu.
+
+```bash
+$ python
+>>> 2 + 2
+4
+>>> print("Test REPL")
+Test REPL
 ```
