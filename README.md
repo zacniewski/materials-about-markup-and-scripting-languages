@@ -50,5 +50,5 @@ Przykłady: HTML, XML, Markdown.
 11. **L11: Interaktywność z JS** – Walidacja formularzy po stronie klienta.
 12. **L12: JSON w praktyce** – Komunikacja między skryptami.
 13. **L13: Ekstrakcja danych** – Skrypt przetwarzający pliki CSV, JSON, XML i YAML.
-14. **L14: Kolokwium praktyczne 1** – Sprawdzian z podstaw Pythona i OOP.
-15. **L15: Kolokwium praktyczne 2** – Sprawdzian z technologii webowych i formatów danych.
+14. **L14: Sprawdzian (podstawowy) z podstaw Pythona i OOP + Sprawdzian z technologii webowych**
+15. **L15  Sprawdzian (poprawkowy) z podstaw Pythona i OOP + Sprawdzian z technologii webowych**

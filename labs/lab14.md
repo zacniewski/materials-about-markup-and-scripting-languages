@@ -1,4 +1,4 @@
-# Laboratorium 14: Kolokwium praktyczne 1
+# Laboratorium 14: Sprawdzian z podstaw Pythona i OOP + Sprawdzian z technologii webowych
 
 Poniżej znajdują się przykładowe zadania na kolokwium. Podobne zadania mogą wystąpić na właściwym kolokwium sprawdzającym umiejętności praktyczne. Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.
 

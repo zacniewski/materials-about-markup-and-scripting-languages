@@ -1,4 +1,4 @@
-# Laboratorium 15: Kolokwium praktyczne 2
+# Laboratorium 15 (poprawkowy) - Sprawdzian z podstaw Pythona i OOP + Sprawdzian z technologii webowych
 
 Poniżej znajdują się przykładowe zadania na kolokwium. Podobne zadania mogą wystąpić na właściwym kolokwium sprawdzającym umiejętności praktyczne. Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.
 
