@@ -51,4 +51,4 @@ Przykłady: HTML, XML, Markdown.
 12. **L12: JSON w praktyce** – Komunikacja między skryptami.
 13. **L13: Ekstrakcja danych** – Skrypt przetwarzający pliki CSV, JSON, XML i YAML.
 14. **L14: Sprawdzian (podstawowy) z podstaw Pythona i OOP + Sprawdzian z technologii webowych**
-15. **L15  Sprawdzian (poprawkowy) z podstaw Pythona i OOP + Sprawdzian z technologii webowych**
+15. **L15: Sprawdzian (poprawkowy) z podstaw Pythona i OOP + Sprawdzian z technologii webowych**
