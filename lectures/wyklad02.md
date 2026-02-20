@@ -3,14 +3,15 @@
 ## 1. Zmienne i dynamiczne typowanie
 W Pythonie zmienna jest etykietą przypisaną do obiektu w pamięci. Nie musimy deklarować typu zmiennej przy jej tworzeniu – typ jest określany automatycznie na podstawie przypisanej wartości. Możemy również zmienić typ zmiennej w trakcie działania programu (choć zazwyczaj nie jest to zalecane).
 
-```python
-x = 10       # int
-x = "dziesięć" # zmiana typu na str (dynamiczne typowanie)
+### Referencje do obiektów
+Warto zrozumieć, że w Pythonie zmienne nie "przechowują" wartości, lecz "wskazują" na obiekty.
 
-y = 3.14     # float
-name = "Jan" # str
-is_true = True # bool
+```mermaid
+graph LR
+    A[Zmienna x] --> B((Obiekt int: 10))
+    C[Zmienna y] --> B
 ```
+Jeśli wykonamy `y = x`, obie zmienne wskazują na ten sam obiekt w pamięci.
 
 ### Zasady nazewnictwa zmiennych:
 - Nazwy mogą zawierać litery, cyfry i podkreślenia (`_`).

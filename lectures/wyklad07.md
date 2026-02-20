@@ -3,6 +3,21 @@
 ## 1. Obsługa wyjątków
 Wyjątki to błędy wykryte podczas wykonywania programu (runtime errors). Blok `try-except` pozwala na przechwycenie błędu i zapobieganie nagłemu zakończeniu programu.
 
+```mermaid
+flowchart TD
+    A[Start] --> T[try: wykonaj kod]
+    T -->|Sukces| ELS[else: wykonaj kod po sukcesie]
+    T -->|Błąd| EX{Jaki typ wyjątku?}
+    EX -->|ZeroDivisionError| H1[Obsłuż: komunikat]
+    EX -->|ValueError| H2[Obsłuż: komunikat]
+    EX -->|Inny| H3[Obsłuż: loguj/komunikat]
+    H1 --> FIN[finally]
+    H2 --> FIN
+    H3 --> FIN
+    ELS --> FIN
+    FIN --> END[Koniec]
+```
+
 ```python
 try:
     liczba = int(input("Podaj liczbę: "))
@@ -33,6 +48,13 @@ def sprawdz_wiek(wiek):
 
 ## 2. Praca z plikami
 Zawsze zaleca się używanie menadżera kontekstu `with`. Gwarantuje on poprawne zamknięcie pliku, nawet jeśli wystąpi błąd.
+
+```mermaid
+flowchart LR
+    Open[open('dane.txt', 'w')] --> With[with ... as f]
+    With --> Write[f.write / f.writelines]
+    With --> AutoClose[automatyczne zamknięcie pliku]
+```
 
 ### Zapisywanie do pliku (`w` - write, `a` - append):
 ```python

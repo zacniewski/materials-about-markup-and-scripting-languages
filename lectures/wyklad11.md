@@ -24,6 +24,16 @@ let osoba = {             // Obiekt (Object)
 };
 ```
 
+### Triki ES6+: Destrukturyzacja i stringi szablonowe
+```javascript
+// Destrukturyzacja obiektu i tablicy
+const { imie, nazwisko } = osoba;
+const [pierwsza, druga] = oceny;
+
+// String szablonowy (template literal)
+console.log(`Witaj, ${imie} ${nazwisko}! Twoja pierwsza ocena to ${pierwsza}.`);
+```
+
 ## 3. Funkcje i strzałki
 JavaScript oferuje klasyczne funkcje oraz nowoczesne funkcje strzałkowe (arrow functions).
 
@@ -72,4 +82,19 @@ graph LR
     A[Użytkownik klika] --> B[Przeglądarka wykrywa zdarzenie]
     B --> C[Uruchomienie funkcji JavaScript]
     C --> D[Aktualizacja widoku HTML]
+```
+
+### Uproszczona pętla zdarzeń (Event Loop)
+```mermaid
+sequenceDiagram
+    participant C as Call Stack
+    participant W as Web APIs
+    participant Q as Callback Queue
+    participant L as Event Loop
+
+    Note over C: Wywołania synchroniczne
+    C->>W: setTimeout(fn, 0)
+    W-->>Q: fn po czasie
+    L->>C: Sprawdza pusty stos
+    Q-->>C: Przekazuje fn do wykonania
 ```

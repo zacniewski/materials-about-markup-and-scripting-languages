@@ -14,6 +14,9 @@ Markdown to lekki język znaczników służący do formatowania tekstu za pomoc�
 | Lista numerowana | `1. element` |
 | Zadanie (Checkbox) | `- [x] zadanie` |
 
+### Trik: Skróty klawiszowe i szybkie generowanie
+Wiele edytorów (jak VS Code czy Obsidian) wspiera szybkie tworzenie list i tabel. W VS Code można użyć rozszerzeń takich jak "Markdown All in One", aby automatycznie generować spisy treści i formatować tabele jednym skrótem klawiszowym.
+
 ### Przykład tabeli w Markdown:
 ```markdown
 | Produkt | Cena | Dostępność |
@@ -26,6 +29,22 @@ Markdown to lekki język znaczników służący do formatowania tekstu za pomoc�
 
 ## 2. Język HTML (HyperText Markup Language)
 HTML jest szkieletem strony internetowej. Definiuje on strukturę i semantykę treści, ale nie jej wygląd (tym zajmuje się CSS).
+
+### Diagram struktury dokumentu HTML:
+```mermaid
+graph TD
+    HTML[html - korzeń] --> HEAD[head - metadane]
+    HTML --> BODY[body - treść widoczna]
+    HEAD --> TITLE[title]
+    HEAD --> META[meta charset/viewport]
+    HEAD --> LINK[link - CSS]
+    BODY --> HEADER[header]
+    BODY --> MAIN[main]
+    BODY --> FOOTER[footer]
+    MAIN --> SECTION[section/article]
+    SECTION --> H1[h1-h6]
+    SECTION --> P[p]
+```
 
 ### Semantyka w HTML5:
 Współczesny HTML stawia na semantykę, czyli używanie tagów, które opisują swoją rolę w dokumencie:

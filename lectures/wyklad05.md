@@ -3,6 +3,17 @@
 ## 1. Definiowanie funkcji
 Funkcje pozwalają na wielokrotne wykorzystanie fragmentów kodu, co zwiększa czytelność i ułatwia testowanie. Definiujemy je za pomocą słowa kluczowego `def`.
 
+```mermaid
+graph TD
+    Call[Wywołanie funkcji: f(x)] --> Pass[Przekazanie argumentów]
+    Pass --> Exec[Wykonanie ciała funkcji]
+    Exec --> Ret{Return?}
+    Ret -- Tak --> Val[Zwrócenie wartości]
+    Ret -- Nie --> None[Zwrócenie None]
+    Val --> Result[Wynik w miejscu wywołania]
+    None --> Result
+```
+
 ```python
 def pole_prostokata(a, b):
     """Oblicza pole prostokąta.""" # Docstring - dokumentacja funkcji

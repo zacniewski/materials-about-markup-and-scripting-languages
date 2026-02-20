@@ -3,6 +3,20 @@
 ## 1. Klasy i Obiekty
 Klasa to schemat (szablon), a obiekt to konkretna instancja tej klasy stworzona na jej podstawie. Programowanie obiektowe (OOP) pozwala na grupowanie danych i funkcji w logiczne jednostki.
 
+### Koncepcja klasy i obiektu
+Wyobraźmy sobie, że klasa to projekt architektoniczny domu, a obiekty to konkretne domy zbudowane według tego projektu.
+
+```mermaid
+graph TD
+    Klasa[Klasa: Samochod] -- "Instancja 1" --> O1((Obiekt: Toyota))
+    Klasa -- "Instancja 2" --> O2((Obiekt: Tesla))
+    
+    subgraph "Składniki Klasy"
+    Atrybuty[Atrybuty: marka, model, rok]
+    Metody[Metody: __init__, opis, przyspiesz]
+    end
+```
+
 ```python
 class Samochod:
     def __init__(self, marka, model, rok):

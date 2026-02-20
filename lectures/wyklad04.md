@@ -3,6 +3,26 @@
 ## 1. Listy (`list`)
 Uporządkowane, modyfikowalne kolekcje elementów. Pozwalają na przechowywanie elementów różnych typów oraz duplikatów.
 
+```mermaid
+list-item
+    L1[Lista w pamięci]
+    L1 --- E0(Indeks 0: 'jabłko')
+    L1 --- E1(Indeks 1: 'banan')
+    L1 --- E2(Indeks 2: 'wiśnia')
+```
+
+### Triki z listami:
+- **`enumerate()`**: Pobieranie indeksu i wartości jednocześnie.
+- **`zip()`**: Łączenie dwóch list w pary.
+
+```python
+imiona = ["Adam", "Ewa"]
+punkty = [10, 20]
+
+for i, (imie, pkt) in enumerate(zip(imiona, punkty)):
+    print(f"{i}. {imie} zdobył {pkt} pkt.")
+```
+
 ```python
 owoce = ["jabłko", "banan", "wiśnia"]
 owoce.append("pomarańcza") # dodanie na koniec

@@ -9,6 +9,22 @@ Flask to mikro-framework webowy dla Pythona. Jest lekki, elastyczny i łatwy w n
 - **Szablony (Templates):** Pliki HTML z dynamicznymi polami.
 - **Kontekst żądania:** Informacje o bieżącym zapytaniu od użytkownika.
 
+### Cykl Żądanie-Odpowiedź (Request-Response Cycle):
+```mermaid
+sequenceDiagram
+    participant U as Użytkownik (Przeglądarka)
+    participant F as Flask (Serwer)
+    participant V as Widok (Funkcja Python)
+    participant T as Szablon (Jinja2)
+    
+    U->>F: Żądanie GET /produkty
+    F->>V: Wywołanie funkcji lista_produktow()
+    V->>T: Przekazanie danych do szablonu
+    T->>V: Wygenerowany HTML
+    V->>F: Zwrócenie odpowiedzi
+    F->>U: Wyświetlenie strony
+```
+
 ## 3. Pierwsza aplikacja Flask
 ```python
 from flask import Flask, render_template
@@ -56,6 +72,16 @@ def lista_produktow():
     {% endfor %}
 </ul>
 ```
+
+### Trik: Context Processors
+Jeśli chcesz, aby jakaś zmienna była dostępna we wszystkich szablonach (np. nazwa strony lub rok w stopce), użyj dekoratora `@app.context_processor`.
+
+```python
+@app.context_processor
+def inject_now():
+    return {'rok': 2026}
+```
+W dowolnym pliku HTML możesz teraz użyć `{{ rok }}` bez przekazywania go w `render_template`.
 
 ## 5. Obsługa formularzy i metod HTTP
 Domyślnie routing obsługuje tylko metodę **GET**. Aby przyjąć dane z formularza, musimy dodać metodę **POST**.

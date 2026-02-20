@@ -3,6 +3,15 @@
 ## 1. Instrukcje warunkowe
 Instrukcja `if` pozwala na wykonywanie kodu tylko wtedy, gdy spełniony jest określony warunek. W Pythonie kluczowe jest stosowanie wcięć (zazwyczaj 4 spacje) do definiowania bloków kodu.
 
+```mermaid
+flowchart TD
+    Start([Początek]) --> Cond{Warunek?}
+    Cond -- Tak --> Action1[Wykonaj blok kodu]
+    Cond -- Nie --> Action2[Pomiń blok kodu]
+    Action1 --> End([Koniec])
+    Action2 --> End
+```
+
 ```python
 wiek = 18
 
@@ -27,7 +36,15 @@ if temp > 20 and not czy_pada:
 ```
 
 ## 2. Pętla `while`
-Wykonuje się dopóki warunek jest prawdziwy. Jest przydatna, gdy nie wiemy dokładnie, ile razy pętla powinna się powtórzyć.
+Wykonuje się dopóki warunek jest prawdziwy.
+
+```mermaid
+flowchart TD
+    Start([Początek]) --> Cond{Warunek?}
+    Cond -- Tak --> Action[Blok kodu]
+    Action --> Cond
+    Cond -- Nie --> End([Koniec])
+```
 
 ```python
 licznik = 5
@@ -35,12 +52,19 @@ while licznik > 0:
     print(f"Odliczanie: {licznik}")
     licznik -= 1
 print("Start!")
+```
 
-# Pętla nieskończona z break
-while True:
-    odpowiedz = input("Wpisz 'stop', aby zakończyć: ")
-    if odpowiedz == 'stop':
-        break
+### Triki: Operator "Mors" (Walrus Operator `:=`)
+Wprowadzony w Pythonie 3.8, pozwala na przypisanie wartości do zmiennej wewnątrz wyrażenia.
+```python
+# Zamiast:
+# linia = input()
+# while linia != "stop":
+#     ...
+
+# Można:
+while (linia := input("Wpisz coś: ")) != "stop":
+    print(f"Wpisałeś: {linia}")
 ```
 
 ## 3. Pętla `for`

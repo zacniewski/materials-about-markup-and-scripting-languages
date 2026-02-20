@@ -7,6 +7,17 @@ CSS (Cascading Style Sheets) to kaskadowe arkusze stylów używane do opisu prez
 - **Kaskadowość:** Jeśli do tego samego elementu odnoszą się sprzeczne reguły, CSS rozstrzyga, która ma pierwszeństwo na podstawie źródła i ważności.
 - **Specyficzność:** Selektory mają różną "wagę". Identyfikator (`#`) jest ważniejszy niż klasa (`.`), a klasa ważniejsza niż tag.
 
+### Diagram specyficzności selektorów:
+```mermaid
+graph LR
+    ID[ID: #header - 100] --> Class[Klasa: .btn - 10]
+    Class --> Tag[Tag: h1 - 1]
+    Tag --> Universal[Uniwersalny: * - 0]
+    style ID fill:#f96,stroke:#333
+    style Class fill:#69f,stroke:#333
+    style Tag fill:#9f6,stroke:#333
+```
+
 ## 2. Selektory i kaskada
 ```css
 /* Selektor elementu - dotyczy wszystkich <h2> */
@@ -78,6 +89,20 @@ Idealny do dwuwymiarowych, bardziej złożonych układów.
 ```
 
 ## 5. Kolory i jednostki
+### Trik: Zmienne CSS (Custom Properties)
+Zmienne pozwalają na definiowanie wartości w jednym miejscu i używanie ich w całym arkuszu. Ułatwia to zmianę motywu strony.
+```css
+:root {
+    --primary-color: #3498db;
+    --font-size-base: 16px;
+}
+
+button {
+    background-color: var(--primary-color);
+    font-size: var(--font-size-base);
+}
+```
+
 ### Kolory:
 - Nazwane: `red`, `blue`
 - Hex: `#ff0000`, `#333`
