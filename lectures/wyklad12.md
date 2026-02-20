@@ -13,6 +13,14 @@ JSON (JavaScript Object Notation) to lekki format wymiany danych, niezależny od
 ## 2. Obsługa JSON w Pythonie
 Python posiada wbudowany moduł `json`, który pozwala na łatwą konwersję między formatem JSON a słownikami/listami Pythona.
 
+```mermaid
+graph LR
+    A[Plik JSON / tekst] -- loads --> B[Słownik / Lista (Python)]
+    B -- dumps --> A
+    B -- dump --> C[Plik .json]
+    A -- load --> B
+```
+
 ```python
 import json
 
@@ -43,6 +51,12 @@ with open("config.json", "w") as f:
 # Odczyt z pliku
 with open("config.json", "r") as f:
     wczytane_dane = json.load(f)
+```
+
+### Trik: szybkie formatowanie JSON w terminalu
+Jeśli masz surowy JSON w pliku i chcesz go ładnie sformatować:
+```bash
+python -m json.tool config.json > config_pretty.json
 ```
 
 ## 4. JSON a REST API (Przykład koncepcyjny)

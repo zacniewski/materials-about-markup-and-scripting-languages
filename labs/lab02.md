@@ -20,6 +20,37 @@ Celem zajęć jest zapoznanie się z podstawami składni języka Python, w tym z
 - Wczytywanie danych tekstowych (linia tekstu vs pojedyncze słowo).
 - Podstawowe błędy składniowe i logiczne związane z typami danych.
 
+## 1. Typy danych i konwersja
+W Pythonie funkcja `input()` zawsze zwraca tekst (`str`). Aby wykonywać operacje matematyczne, musimy dokonać jawnej konwersji typów (rzutowania).
+
+```mermaid
+graph LR
+    User[Użytkownik] -- "wpisuje '10'" --> Input[input]
+    Input -- "str: '10'" --> Convert[int/float]
+    Convert -- "int: 10" --> Math[Działania matematyczne]
+```
+
+### Przykład rzutowania:
+```python
+wiek_str = input("Ile masz lat? ")
+wiek_int = int(wiek_str)  # Konwersja na liczbę całkowitą
+```
+
+## 2. Operacje na tekstach (String slicing)
+Python umożliwia łatwe wycinanie fragmentów tekstu za pomocą notacji `[start:stop:step]`.
+
+```python
+tekst = "Python"
+# Indeksy:  P  y  t  h  o  n
+#           0  1  2  3  4  5
+#          -6 -5 -4 -3 -2 -1
+
+print(tekst[0:2])   # "Py" (od 0 do 1, bez 2)
+print(tekst[::-1])  # "nohtyP" (odwrócenie tekstu)
+```
+
+---
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

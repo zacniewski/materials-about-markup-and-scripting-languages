@@ -33,6 +33,19 @@ pip install -r requirements.txt
 ## 3. Środowiska wirtualne (`venv`)
 Środowisko wirtualne pozwala na odizolowanie zależności różnych projektów. Zapobiega to konfliktom wersji (np. Projekt A wymaga Django 3, a Projekt B wymaga Django 4).
 
+```mermaid
+graph LR
+    Sys[Systemowy Python] -->|bez venv| P1[Projekt A: Django 3]
+    Sys -->|bez venv| P2[Projekt B: Django 4]
+    P1 -.-> Conflict((Konflikt wersji))
+    P2 -.-> Conflict
+
+    subgraph Izolacja z venv
+    V1[(venv A)] --- PA[Projekt A]
+    V2[(venv B)] --- PB[Projekt B]
+    end
+```
+
 ### Tworzenie i aktywacja:
 ```bash
 # Utworzenie środowiska w folderze .venv
@@ -68,3 +81,8 @@ deactivate
 # except Exception as e:
 #     print(f"Błąd: {e}")
 ```
+
+### Dobre praktyki pracy z zależnościami
+- Utrzymuj plik `requirements.txt` (lub `requirements.in` + `requirements.txt` generowany przez narzędzia typu pip‑tools).
+- Pinuj wersje (`pakiet==wersja`) dla reprodukowalności środowiska.
+- Aktualizuj zależności świadomie (changelog, testy po aktualizacji).

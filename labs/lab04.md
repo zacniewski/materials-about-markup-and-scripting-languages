@@ -3,6 +3,27 @@
 ## Cel zajęć
 Zarządzanie danymi w listach, krotkach, zbiorach i słownikach.
 
+## 1. Wycinanie list (Slicing) - przypomnienie
+Slicing pozwala na szybki dostęp do podzbiorów kolekcji. Składnia to `lista[start:stop:krok]`.
+
+```mermaid
+graph LR
+    L[Lista] --> S[Slicing]
+    S --> F[Pierwsze 3: [:3]]
+    S --> L2[Ostatnie 2: [-2:]]
+    S --> R[Od tyłu: [::-1]]
+```
+
+## 2. Metody słownika
+Słowniki to jedne z najważniejszych struktur w Pythonie. Pamiętaj o metodzie `.get()`, która zapobiega błędom `KeyError`.
+```python
+ceny = {"chleb": 4.50, "mleko": 3.20}
+# Bezpieczne pobranie ceny
+cena = ceny.get("jajka", 0.00) # Jeśli nie ma jajek, zwróci 0.00
+```
+
+---
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

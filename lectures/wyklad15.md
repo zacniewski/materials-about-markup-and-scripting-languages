@@ -59,6 +59,32 @@ W trakcie tego kursu poznaliśmy:
 5.  **Tworzenie aplikacji webowych** (Flask, JavaScript).
 6.  **Profesjonalne narzędzia** (pip, venv, dobre praktyki).
 
+### Diagram: mapa pojęć kursu
+```mermaid
+mindmap
+  root((JZiS))
+    Python
+      Typy
+      Pętle
+      Funkcje
+      OOP
+    Web
+      HTML
+      CSS
+      JS
+      Flask
+    Dane
+      JSON
+      CSV
+      XML
+      YAML
+    Narzędzia
+      pip
+      venv
+      PEP8
+      Testy
+```
+
 ### Co dalej?
 - Eksploracja bibliotek do nauki o danych: **Pandas**, **Matplotlib**.
 - Tworzenie bardziej zaawansowanych stron w **Django**.

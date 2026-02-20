@@ -5,6 +5,20 @@ Poniżej znajdują się przykładowe zadania na kolokwium. Podobne zadania mogą
 ## Cel
 Sprawdzenie umiejętności z zakresu technologii webowych (HTML, CSS, JS, Flask) oraz przetwarzania różnych formatów danych (JSON, XML, CSV, YAML).
 
+## Teoria w pigułce (zakres)
+- HTML/CSS: semantyka HTML5, box model, specyficzność, RWD (media queries, flex/grid).
+- JS: `const`/`let`, funkcje strzałkowe, manipulacja DOM, zdarzenia.
+- Flask: routing, szablony Jinja2, metody GET/POST.
+- Dane: JSON/CSV/XML/YAML – podstawowe operacje konwersji.
+
+```mermaid
+flowchart LR
+  U[Użytkownik] --> B[Przeglądarka]
+  B --> S[Serwer Flask]
+  S -->|render| T[Szablon Jinja2]
+  S -->|JSON| API[(Endpoint /dane)]
+```
+
 ## Przykładowe zadania
 
 ### Zadanie 1: HTML i CSS (Struktura i Styl)

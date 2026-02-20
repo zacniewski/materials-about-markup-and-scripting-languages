@@ -3,6 +3,18 @@
 ## Cel zajęć
 Praktyczne tworzenie dokumentów przy użyciu języków znaczników.
 
+## Teoria w pigułce
+- Markdown to lekki język do formatowania treści (README, dokumentacja).
+- HTML definiuje strukturę strony; wygląd nadaje CSS.
+- Semantyczne tagi HTML5 (`header`, `nav`, `main`, `section`, `footer`) poprawiają dostępność i SEO.
+
+```mermaid
+graph TD
+  A[Markdown] -->|render| B[HTML]
+  B --> C[DOM w przeglądarce]
+  C --> D[Stylowanie CSS]
+```
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

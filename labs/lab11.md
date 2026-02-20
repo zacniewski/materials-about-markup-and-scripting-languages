@@ -3,6 +3,18 @@
 ## Cel zajęć
 Wprowadzenie interaktywności na stronie za pomocą skryptów JS.
 
+## Teoria w pigułce
+- `const`/`let` — nowoczesne deklaracje zmiennych (unikaj `var`).
+- DOM to drzewo elementów HTML, które JS może modyfikować.
+- Zdarzenia (click, input) wywołują handler przypięty do elementu.
+
+```mermaid
+graph TD
+  U[Użytkownik] --> E[Zdarzenie w przeglądarce]
+  E --> H[Handler JS]
+  H --> D[Zmiana DOM]
+```
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

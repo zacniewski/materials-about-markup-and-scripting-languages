@@ -3,6 +3,19 @@
 ## Cel zajęć
 Wykorzystanie CSS do zmiany wyglądu strony HTML.
 
+## Teoria w pigułce
+- Specyficzność: `#id` > `.klasa` > `tag` > `*`.
+- Box model: element = content + padding + border + margin.
+- RWD: Media Queries pozwalają dostosować styl do szerokości ekranu.
+
+```mermaid
+graph TD
+  A[Element] --> B[Content]
+  B --> C[Padding]
+  C --> D[Border]
+  D --> E[Margin]
+```
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

@@ -3,6 +3,21 @@
 ## Cel zajęć
 Poznanie różnych formatów danych (XML, YAML, CSV, JSON) oraz nabycie umiejętności ich przetwarzania i konwersji przy użyciu języka Python.
 
+## Teoria w pigułce
+- CSV: dane tabelaryczne; dobre do arkuszy, brak zagnieżdżeń.
+- JSON: lekki, zagnieżdżone struktury, standard dla API.
+- XML: rozbudowany, walidacja XSD, atrybuty.
+- YAML: czytelny, idealny do konfiguracji; wrażliwy na wcięcia.
+
+```mermaid
+mindmap
+  root((Formaty))
+    CSV
+    JSON
+    XML
+    YAML
+```
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

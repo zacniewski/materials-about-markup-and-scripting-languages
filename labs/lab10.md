@@ -3,6 +3,25 @@
 ## Cel zajęć
 Uruchomienie lokalnego serwera WWW i renderowanie szablonów HTML.
 
+## Teoria w pigułce
+- Routing mapuje URL na funkcję (widok) w Pythonie.
+- Szablony Jinja2 pozwalają generować HTML z danymi.
+- Metody HTTP: GET (pobierz), POST (wyślij dane formularza).
+
+```mermaid
+sequenceDiagram
+  participant U as Przeglądarka
+  participant F as Flask
+  participant V as Widok
+  participant T as Szablon
+  U->>F: GET /
+  F->>V: Wywołanie funkcji
+  V->>T: Renderuj szablon z danymi
+  T-->>V: HTML
+  V-->>F: Odpowiedź
+  F-->>U: Strona HTML
+```
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

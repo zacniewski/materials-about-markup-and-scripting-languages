@@ -3,6 +3,41 @@
 ## Cel zajęć
 Implementacja własnych klas, metod oraz wykorzystanie dziedziczenia.
 
+## 1. Klasy i obiekty - koncepcja
+Pamiętaj, że klasa to tylko schemat, a obiekt to konkretny byt w pamięci.
+
+```mermaid
+graph TD
+    Klasa[Klasa: Student] --> Obiekt1[Obiekt: Jan Kowalski]
+    Klasa --> Obiekt2[Obiekt: Anna Nowak]
+```
+
+### Metoda `__init__`
+To tutaj definiujesz początkowy stan obiektu.
+
+```python
+class Student:
+    def __init__(self, imie, nazwisko):
+        self.imie = imie
+        self.nazwisko = nazwisko
+```
+
+## 2. Dziedziczenie
+Umożliwia ponowne wykorzystanie kodu. Klasa potomna dziedziczy wszystkie atrybuty i metody klasy bazowej.
+
+```mermaid
+classDiagram
+    Zwierze <|-- Pies
+    Zwierze : +imie
+    Zwierze : +daj_glos()
+    class Pies {
+      +rasa
+      +daj_glos()
+    }
+```
+
+---
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

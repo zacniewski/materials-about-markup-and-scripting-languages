@@ -22,6 +22,13 @@ with open('nowe_dane.csv', mode='w', newline='') as f:
     writer.writerow([1, 'Kawa', 15.50])
 ```
 
+### Trik: szybka transformacja CSV -> słowniki z użyciem dict comprehension
+```python
+with open('produkty.csv', newline='') as f:
+    reader = csv.DictReader(f)
+    ceny = {row['nazwa']: float(row['cena']) for row in reader}
+```
+
 ## 2. XML (eXtensible Markup Language)
 XML jest bardziej rygorystyczny niż HTML. Każdy tag musi być zamknięty, a dokument musi mieć jeden element główny (root).
 
@@ -57,6 +64,23 @@ app:
 ```
 
 ## 4. Porównanie i wybór formatu
+```mermaid
+mindmap
+  root((Formaty danych))
+    CSV
+      + Prosty, mały
+      - Brak zagnieżdżeń
+    JSON
+      + Lekki, powszechny w API
+      - Brak komentarzy
+    XML
+      + Walidacja, atrybuty
+      - Rozgadany
+    YAML
+      + Czytelny, komentarze
+      - Wrażliwy na wcięcia
+```
+
 | Format | Zalety | Wady |
 |--------|--------|------|
 | **CSV** | Mały rozmiar, obsługa w Excelu | Brak wsparcia dla danych zagnieżdżonych |

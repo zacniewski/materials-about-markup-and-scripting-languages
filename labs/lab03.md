@@ -3,6 +3,32 @@
 ## Cel zajęć
 Wykorzystanie instrukcji warunkowych i pętli do sterowania przepływem programu.
 
+## 1. Pętle i warunki w pigułce
+W Pythonie pętle i instrukcje warunkowe opierają się na wcięciach. Pętla `for` najlepiej sprawdza się przy iteracji po zbiorach danych, natomiast `while` gdy czekamy na spełnienie konkretnego warunku.
+
+### Przykład: Sprawdzanie parzystości w pętli
+```mermaid
+flowchart TD
+    Start([Początek]) --> Input[/Pobierz liczbę/]
+    Input --> Loop{Czy liczba > 0?}
+    Loop -- Tak --> Parity{Czy liczba % 2 == 0?}
+    Parity -- Tak --> Even[Wypisz: Parzysta]
+    Parity -- Nie --> Odd[Wypisz: Nieparzysta]
+    Even --> Decr[Zmniejsz liczbę o 1]
+    Odd --> Decr
+    Decr --> Loop
+    Loop -- Nie --> End([Koniec])
+```
+
+## 2. Losowanie liczb
+Do zadań z losowaniem (np. gra w zgadywanie) wykorzystujemy moduł `random`:
+```python
+import random
+liczba = random.randint(1, 100)  # losuje liczbę od 1 do 100 włącznie
+```
+
+---
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

@@ -3,6 +3,19 @@
 ## Cel zajęć
 Wykorzystanie formatu JSON do przesyłania i przechowywania danych.
 
+## Teoria w pigułce
+- JSON: klucze w cudzysłowie, wartości: liczby, string, bool, null, obiekty, tablice.
+- W Pythonie: `json.loads/loads` (tekst↔obiekt), `json.dump/dumps` (plik↔obiekt).
+- Walidacja i obsługa błędów: `try/except` przy parsowaniu.
+
+```mermaid
+graph LR
+  T[tekst JSON] -- parse --> O[obiekt Python]
+  O -- stringify --> T
+  O -- dump --> P[plik .json]
+  P -- load --> O
+```
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 

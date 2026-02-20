@@ -5,6 +5,18 @@ Poniżej znajdują się przykładowe zadania na kolokwium. Podobne zadania mogą
 ## Cel
 Sprawdzenie umiejętności z zakresu podstaw programowania w języku Python, pracy z kolekcjami, funkcjami oraz programowania obiektowego.
 
+## Teoria w pigułce (zakres)
+- Python: typy, instrukcje warunkowe, pętle, funkcje (parametry domyślne, `*args`, `**kwargs`), moduły, pliki, wyjątki.
+- Kolekcje: listy, krotki, zbiory, słowniki + podstawowe metody.
+- OOP: klasy, `__init__`, dziedziczenie, nadpisywanie metod, `__str__`.
+
+```mermaid
+classDiagram
+  class Zwierze{+daj_glos()}
+  class Pies{+daj_glos()}
+  Zwierze <|-- Pies
+```
+
 ## Przykładowe zadania
 
 ### Zadanie 1: Przetwarzanie danych liczbowych (Podstawy)

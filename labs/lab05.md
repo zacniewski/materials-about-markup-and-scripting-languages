@@ -3,6 +3,34 @@
 ## Cel zajęć
 Organizacja kodu w funkcje oraz korzystanie z biblioteki standardowej.
 
+## 1. Struktura funkcji
+Funkcja to wydzielony blok kodu, który można wywoływać wielokrotnie.
+
+```mermaid
+graph LR
+    Args[Parametry wejściowe] --> Func[Ciało funkcji]
+    Func --> Return[Zwracana wartość]
+```
+
+### Docstringi
+Zawsze opisuj swoje funkcje używając potrójnych cudzysłowów tuż pod nagłówkiem `def`.
+```python
+def pole_kola(r):
+    """Oblicza pole koła na podstawie promienia r."""
+    import math
+    return math.pi * r**2
+```
+
+## 2. Importowanie własnych modułów
+Aby zaimportować własny plik (np. `moj_modul.py`), musi on znajdować się w tym samym folderze co skrypt uruchamiający.
+
+```python
+import moj_modul
+moj_modul.funkcja()
+```
+
+---
+
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 
