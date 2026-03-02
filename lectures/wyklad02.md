@@ -25,6 +25,7 @@ Jeśli wykonamy `y = x`, obie zmienne wskazują na ten sam obiekt w pamięci.
 |-----|------|----------|
 | `int` | Liczby całkowite o nieograniczonej precyzji | `5`, `-2`, `10**100` |
 | `float` | Liczby zmiennoprzecinkowe (zgodne z IEEE 754) | `2.5`, `1.2e-3` |
+| `complex` | Liczby zespolone | `3+5j` |
 | `str` | Ciągi znaków (Unicode) | `"Cześć"`, `'Python'` |
 | `bool` | Wartości logiczne | `True`, `False` |
 | `NoneType` | Reprezentuje brak wartości (odpowiednik `null`) | `None` |
@@ -72,6 +73,8 @@ print(a ** b) # 1000
 | `and` | Koniunkcja (I) | `True and False` (False) |
 | `or` | Alternatywa (LUB) | `True or False` (True) |
 | `not` | Negacja (NIE) | `not True` (False) |
+| `is` | Identyczność obiektów | `x is y` |
+| `in` | Sprawdzenie przynależności | `'a' in 'auto'` (True) |
 
 ### Skrócone operatory przypisania:
 ```python
@@ -80,16 +83,49 @@ x += 3 # odpowiednik x = x + 3
 x *= 2 # odpowiednik x = x * 2
 ```
 
-## 5. Konwersja typów (Casting)
-Czasami musimy zmienić typ danych, np. gdy pobieramy dane od użytkownika przez `input()`, który zawsze zwraca `str`.
+### Priorytety operatorów (od najwyższego):
+1. Nawiasy `()`
+2. Potęgowanie `**`
+3. Jednoargumentowe `+`, `-`, `~`
+4. Mnożenie, dzielenie, reszta `*`, `/`, `//`, `%`
+5. Dodawanie, odejmowanie `+`, `-`
+6. Operatory porównania, `is`, `in`
+7. Logiczne `not`, `and`, `or`
+
+## 6. Praca z tekstami (Stringi)
+Stringi w Pythonie są niemutowalne (nie można ich zmienić po utworzeniu, każda operacja tworzy nowy obiekt).
+
+### Formatowanie f-string (od Python 3.6+):
+```python
+imie = "Anna"
+wiek = 20
+# Najwygodniejszy sposób formatowania
+print(f"Cześć, mam na imię {imie} i mam {wiek} lat.")
+# Można też wykonywać operacje wewnątrz nawiasów
+print(f"Za rok będę mieć {wiek + 1} lat.")
+```
+
+### Metody klasy `str`:
+- `strip()` – usuwa białe znaki z początku i końca.
+- `split(separator)` – dzieli tekst na listę według separatora (domyślnie spacja).
+- `join(iterable)` – łączy elementy listy w jeden tekst za pomocą separatora.
+- `replace(stary, nowy)` – zamienia fragmenty tekstu.
+- `upper()`, `lower()`, `capitalize()` – zmiana wielkości liter.
+
+### Znaki ucieczki (Escape characters):
+- `\n` – nowa linia.
+- `\t` – tabulacja.
+- `\\` – odwrotny ukośnik (backslash).
+- `\"` , `\'` – cudzysłów i apostrof wewnątrz tekstu.
+
+## 7. Biblioteka `math`
+Dla bardziej zaawansowanych obliczeń Python dostarcza moduł `math`.
 
 ```python
-liczba_str = "10"
-liczba_int = int(liczba_str) # Konwersja na int
+import math
 
-pi_str = "3.14"
-pi_float = float(pi_str)     # Konwersja na float
-
-wiek = 25
-wiadomosc = "Mam " + str(wiek) + " lat" # Konwersja na str do konkatenacji
+print(math.pi)       # 3.141592653589793
+print(math.sqrt(16)) # 4.0 (pierwiastek)
+print(math.ceil(2.1))# 3 (zaokrąglenie w górę)
+print(math.floor(2.9))# 2 (zaokrąglenie w dół)
 ```
