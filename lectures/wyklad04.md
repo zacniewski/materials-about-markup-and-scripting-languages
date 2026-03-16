@@ -4,11 +4,11 @@
 Uporządkowane, modyfikowalne kolekcje elementów. Pozwalają na przechowywanie elementów różnych typów oraz duplikatów. W pamięci listy są tablicami dynamicznymi, co oznacza, że dostęp do elementu po indeksie jest bardzo szybki (O(1)).
 
 ```mermaid
-list-item
+graph TD
     L1[Lista w pamięci]
-    L1 --- E0(Indeks 0: 'jabłko')
-    L1 --- E1(Indeks 1: 'banan')
-    L1 --- E2(Indeks 2: 'wiśnia')
+    L1 --- E0("Indeks 0: 'jabłko'")
+    L1 --- E1("Indeks 1: 'banan'")
+    L1 --- E2("Indeks 2: 'wiśnia'")
 ```
 
 ### Podstawowe metody list:
