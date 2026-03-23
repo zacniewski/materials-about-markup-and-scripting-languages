@@ -5,7 +5,7 @@ Funkcje pozwalają na wielokrotne wykorzystanie fragmentów kodu, co zwiększa c
 
 ```mermaid
 graph TD
-    Call[Wywołanie funkcji: f(x)] --> Pass[Przekazanie argumentów]
+    Call["Wywołanie funkcji: f(x)"] --> Pass[Przekazanie argumentów]
     Pass --> Exec[Wykonanie ciała funkcji]
     Exec --> Ret{Return?}
     Ret -- Tak --> Val[Zwrócenie wartości]
