@@ -1,14 +1,18 @@
 # Wykład 11: Wstęp do JavaScript
 
 ## 1. Co to jest JavaScript?
+
 JavaScript (JS) to dynamiczny, interpretowany język programowania, który jest fundamentem współczesnych stron WWW (obok HTML i CSS). Mimo podobnej nazwy, JS nie ma nic wspólnego z językiem Java.
 
 ### Gdzie działa JavaScript?
+
 - **Frontend:** W przeglądarce użytkownika (interakcje, animacje, pobieranie danych).
 - **Backend:** Dzięki środowisku Node.js może działać również na serwerze.
 
 ## 2. Zmienne i typy danych
+
 Współczesny JS (ES6+) używa trzech sposobów deklaracji zmiennych:
+
 - `const`: Stała, której wartości nie można zmienić.
 - `let`: Zmienna o zasięgu blokowym (zalecana).
 - `var`: Stary sposób deklaracji (niezalecany).
@@ -25,6 +29,7 @@ let osoba = {             // Obiekt (Object)
 ```
 
 ### Triki ES6+: Destrukturyzacja i stringi szablonowe
+
 ```javascript
 // Destrukturyzacja obiektu i tablicy
 const { imie, nazwisko } = osoba;
@@ -35,6 +40,7 @@ console.log(`Witaj, ${imie} ${nazwisko}! Twoja pierwsza ocena to ${pierwsza}.`);
 ```
 
 ## 3. Funkcje i strzałki
+
 JavaScript oferuje klasyczne funkcje oraz nowoczesne funkcje strzałkowe (arrow functions).
 
 ```javascript
@@ -50,6 +56,7 @@ console.log(pomnoz(5, 4)); // 20
 ```
 
 ## 4. Manipulacja DOM i Zdarzenia
+
 DOM (Document Object Model) to reprezentacja struktury HTML, którą JS może modyfikować w czasie rzeczywistym.
 
 ```javascript
@@ -66,6 +73,7 @@ przycisk.addEventListener("click", () => {
 ```
 
 ## 5. Praca z danymi - JSON
+
 JSON (JavaScript Object Notation) to format wymiany danych, niemal identyczny ze składnią obiektów JS.
 
 ```javascript
@@ -77,6 +85,7 @@ const nowyJSON = JSON.stringify(obiekt);            // Zamiana na tekst JSON
 ```
 
 ## 6. Diagram przepływu zdarzenia
+
 ```mermaid
 graph LR
     A[Użytkownik klika] --> B[Przeglądarka wykrywa zdarzenie]
@@ -85,6 +94,7 @@ graph LR
 ```
 
 ### Uproszczona pętla zdarzeń (Event Loop)
+
 ```mermaid
 sequenceDiagram
     participant C as Call Stack

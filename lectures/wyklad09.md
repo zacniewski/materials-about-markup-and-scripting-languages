@@ -1,13 +1,16 @@
 # Wykład 9: Podstawy CSS
 
 ## 1. Co to jest CSS?
+
 CSS (Cascading Style Sheets) to kaskadowe arkusze stylów używane do opisu prezentacji dokumentu HTML. Pozwalają one na zmianę kolorów, czcionek, układu elementów (layoutu) oraz dodawanie animacji.
 
 ### Kaskadowość i Specyficzność:
+
 - **Kaskadowość:** Jeśli do tego samego elementu odnoszą się sprzeczne reguły, CSS rozstrzyga, która ma pierwszeństwo na podstawie źródła i ważności.
 - **Specyficzność:** Selektory mają różną "wagę". Identyfikator (`#`) jest ważniejszy niż klasa (`.`), a klasa ważniejsza niż tag.
 
 ### Diagram specyficzności selektorów:
+
 ```mermaid
 graph LR
     ID[ID: #header - 100] --> Class[Klasa: .btn - 10]
@@ -19,6 +22,7 @@ graph LR
 ```
 
 ## 2. Selektory i kaskada
+
 ```css
 /* Selektor elementu - dotyczy wszystkich <h2> */
 h2 {
@@ -45,6 +49,7 @@ a:hover {
 ```
 
 ## 3. Model Pudełkowy (Box Model)
+
 Zrozumienie modelu pudełkowego jest kluczowe dla poprawnego układania elementów.
 
 - **Content:** Sama treść (tekst, obraz).
@@ -53,6 +58,7 @@ Zrozumienie modelu pudełkowego jest kluczowe dla poprawnego układania element�
 - **Margin:** Przezroczysty obszar na zewnątrz obramowania, oddzielający element od innych.
 
 ### Box-sizing:
+
 Domyślnie `width` i `height` dotyczą tylko treści. Użycie `box-sizing: border-box;` sprawia, że padding i border są wliczane w podaną szerokość, co ułatwia projektowanie.
 
 ```css
@@ -66,10 +72,13 @@ div {
 ```
 
 ## 4. Układanie elementów (Layout)
+
 Współczesny CSS oferuje potężne narzędzia do tworzenia layoutów:
 
 ### Flexbox (Flexible Box Layout):
+
 Idealny do jednowymiarowych układów (rzędy lub kolumny).
+
 ```css
 .container {
     display: flex;
@@ -79,7 +88,9 @@ Idealny do jednowymiarowych układów (rzędy lub kolumny).
 ```
 
 ### CSS Grid:
+
 Idealny do dwuwymiarowych, bardziej złożonych układów.
+
 ```css
 .grid-container {
     display: grid;
@@ -89,8 +100,11 @@ Idealny do dwuwymiarowych, bardziej złożonych układów.
 ```
 
 ## 5. Kolory i jednostki
+
 ### Trik: Zmienne CSS (Custom Properties)
+
 Zmienne pozwalają na definiowanie wartości w jednym miejscu i używanie ich w całym arkuszu. Ułatwia to zmianę motywu strony.
+
 ```css
 :root {
     --primary-color: #3498db;
@@ -104,15 +118,17 @@ button {
 ```
 
 ### Kolory:
+
 - Nazwane: `red`, `blue`
 - Hex: `#ff0000`, `#333`
 - RGB/RGBA: `rgb(255, 0, 0)`, `rgba(0, 0, 0, 0.5)` (z przezroczystością)
 
 ### Jednostki:
-| Jednostka | Typ | Opis |
-|-----------|-----|------|
-| `px` | Stała | Piksele |
-| `%` | Relatywna | Procent elementu nadrzędnego |
-| `em` | Relatywna | Zależna od rozmiaru czcionki elementu |
-| `rem` | Relatywna | Zależna od rozmiaru czcionki elementu `<html>` |
-| `vh` / `vw` | Relatywna | 1% wysokości/szerokości okna (viewport) |
+
+| Jednostka   | Typ       | Opis                                           |
+| ----------- | --------- | ---------------------------------------------- |
+| `px`        | Stała     | Piksele                                        |
+| `%`         | Relatywna | Procent elementu nadrzędnego                   |
+| `em`        | Relatywna | Zależna od rozmiaru czcionki elementu          |
+| `rem`       | Relatywna | Zależna od rozmiaru czcionki elementu `<html>` |
+| `vh` / `vw` | Relatywna | 1% wysokości/szerokości okna (viewport)        |

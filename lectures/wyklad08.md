@@ -1,23 +1,27 @@
 # Wykład 8: Wstęp do HTML i Markdown
 
 ## 1. Język Markdown
+
 Markdown to lekki język znaczników służący do formatowania tekstu za pomocą prostej składni tekstowej. Jest szeroko stosowany w dokumentacji (np. README na GitHubie), na forach (StackOverflow) oraz w komunikatorach (Slack, Discord).
 
 ### Rozszerzona składnia Markdown:
-| Efekt | Składnia |
-|-------|----------|
-| Nagłówek 2 | `## Nagłówek` |
-| Przekreślenie | `~~tekst~~` |
-| Cytat | `> tekst` |
-| Blok kodu | ` ```python ... ``` ` |
-| Tabela | `| nagłówek | ... |` |
-| Lista numerowana | `1. element` |
-| Zadanie (Checkbox) | `- [x] zadanie` |
+
+| Efekt              | Składnia                    |
+| ------------------ | --------------------------- |
+| Nagłówek 2         | `## Nagłówek`               |
+| Przekreślenie      | `~~tekst~~`                 |
+| Cytat              | `> tekst`                   |
+| Blok kodu          | ```` ```python ... ``` ```` |
+| Tabela             | \`                          |
+| Lista numerowana   | `1. element`                |
+| Zadanie (Checkbox) | `- [x] zadanie`             |
 
 ### Trik: Skróty klawiszowe i szybkie generowanie
+
 Wiele edytorów (jak VS Code czy Obsidian) wspiera szybkie tworzenie list i tabel. W VS Code można użyć rozszerzeń takich jak "Markdown All in One", aby automatycznie generować spisy treści i formatować tabele jednym skrótem klawiszowym.
 
 ### Przykład tabeli w Markdown:
+
 ```markdown
 | Produkt | Cena | Dostępność |
 |---------|------|------------|
@@ -25,12 +29,14 @@ Wiele edytorów (jak VS Code czy Obsidian) wspiera szybkie tworzenie list i tabe
 | Mleko   | 3.50 | Nie        |
 ```
 
----
+______________________________________________________________________
 
 ## 2. Język HTML (HyperText Markup Language)
+
 HTML jest szkieletem strony internetowej. Definiuje on strukturę i semantykę treści, ale nie jej wygląd (tym zajmuje się CSS).
 
 ### Diagram struktury dokumentu HTML:
+
 ```mermaid
 graph TD
     HTML[html - korzeń] --> HEAD[head - metadane]
@@ -47,7 +53,9 @@ graph TD
 ```
 
 ### Semantyka w HTML5:
+
 Współczesny HTML stawia na semantykę, czyli używanie tagów, które opisują swoją rolę w dokumencie:
+
 - `<header>`: Nagłówek strony/sekcji.
 - `<nav>`: Menu nawigacyjne.
 - `<main>`: Główna treść dokumentu.
@@ -56,6 +64,7 @@ Współczesny HTML stawia na semantykę, czyli używanie tagów, które opisują
 - `<footer>`: Stopka strony.
 
 ### Przykład listy i linku:
+
 ```html
 <nav>
     <ul>
@@ -67,20 +76,22 @@ Współczesny HTML stawia na semantykę, czyli używanie tagów, które opisują
 ```
 
 ### Formularze w HTML:
+
 ```html
 <form action="/submit" method="POST">
     <label for="name">Imię:</label>
     <input type="text" id="name" name="user_name" required>
-    
+
     <label>Płeć:</label>
     <input type="radio" name="gender" value="m"> M
     <input type="radio" name="gender" value="k"> K
-    
+
     <button type="submit">Wyślij</button>
 </form>
 ```
 
 ## 3. Drzewo DOM (Document Object Model)
+
 Przeglądarka interpretuje kod HTML jako strukturę drzewiastą.
 
 ```mermaid

@@ -1,9 +1,11 @@
 # Wykład 12: Format JSON
 
 ## 1. Co to jest JSON?
+
 JSON (JavaScript Object Notation) to lekki format wymiany danych, niezależny od języka programowania. Stał się standardem w komunikacji między systemami (API) ze względu na swoją prostotę i czytelność.
 
 ### Zasady składni JSON:
+
 - Dane są w parach nazwa/wartość.
 - Nazwy (klucze) muszą być w podwójnym cudzysłowie.
 - Dane są oddzielone przecinkami.
@@ -11,6 +13,7 @@ JSON (JavaScript Object Notation) to lekki format wymiany danych, niezależny od
 - Nawiasy kwadratowe `[]` trzymają tablice.
 
 ## 2. Obsługa JSON w Pythonie
+
 Python posiada wbudowany moduł `json`, który pozwala na łatwą konwersję między formatem JSON a słownikami/listami Pythona.
 
 ```mermaid
@@ -25,11 +28,7 @@ graph LR
 import json
 
 # Dane w formacie słownika Pythona
-dane = {
-    "imie": "Marek",
-    "osiagniecia": [10, 25, 40],
-    "premium": False
-}
+dane = {"imie": "Marek", "osiagniecia": [10, 25, 40], "premium": False}
 
 # 1. Serializacja: Słownik -> Tekst JSON
 json_string = json.dumps(dane, indent=4)
@@ -37,10 +36,11 @@ print(json_string)
 
 # 2. Deserializacja: Tekst JSON -> Słownik
 slownik = json.loads(json_string)
-print(slownik["imie"]) # Marek
+print(slownik["imie"])  # Marek
 ```
 
 ## 3. Praca z plikami JSON
+
 Możemy zapisywać i odczytywać dane JSON bezpośrednio z plików za pomocą funkcji `dump` i `load`.
 
 ```python
@@ -54,12 +54,15 @@ with open("config.json", "r") as f:
 ```
 
 ### Trik: szybkie formatowanie JSON w terminalu
+
 Jeśli masz surowy JSON w pliku i chcesz go ładnie sformatować:
+
 ```bash
 python -m json.tool config.json > config_pretty.json
 ```
 
 ## 4. JSON a REST API (Przykład koncepcyjny)
+
 Większość nowoczesnych usług internetowych komunikuje się za pomocą JSON. Chociaż Python wymaga biblioteki `requests` do wygodnej obsługi HTTP, sam format JSON pozostaje taki sam.
 
 ```python

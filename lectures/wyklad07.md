@@ -1,6 +1,7 @@
 # Wykład 7: Obsługa wyjątków i praca z systemem plików
 
 ## 1. Obsługa wyjątków
+
 Wyjątki to błędy wykryte podczas wykonywania programu (runtime errors). Blok `try-except` pozwala na przechwycenie błędu i zapobieganie nagłemu zakończeniu programu.
 
 ```mermaid
@@ -37,6 +38,7 @@ finally:
 ```
 
 ### Podnoszenie wyjątków:
+
 Możemy sami wywołać błąd za pomocą słowa kluczowego `raise`.
 
 ```python
@@ -47,6 +49,7 @@ def sprawdz_wiek(wiek):
 ```
 
 ## 2. Praca z plikami
+
 Zawsze zaleca się używanie menadżera kontekstu `with`. Gwarantuje on poprawne zamknięcie pliku, nawet jeśli wystąpi błąd.
 
 ```mermaid
@@ -57,6 +60,7 @@ flowchart LR
 ```
 
 ### Zapisywanie do pliku (`w` - write, `a` - append):
+
 ```python
 linie = ["Pierwsza linia\n", "Druga linia\n", "Trzecia linia\n"]
 
@@ -66,6 +70,7 @@ with open("dane.txt", "w", encoding="utf-8") as f:
 ```
 
 ### Odczytywanie z pliku (`r` - read):
+
 ```python
 # Odczyt całego pliku
 with open("dane.txt", "r", encoding="utf-8") as f:
@@ -74,33 +79,35 @@ with open("dane.txt", "r", encoding="utf-8") as f:
 # Odczyt linia po linii (bardziej wydajne dla dużych plików)
 with open("dane.txt", "r", encoding="utf-8") as f:
     for linia in f:
-        print(linia.strip()) # strip() usuwa znaki nowej linii
+        print(linia.strip())  # strip() usuwa znaki nowej linii
 ```
 
 ## 3. Formaty danych: CSV i JSON
 
 ### Format CSV (Comma Separated Values)
+
 Służy do przechowywania danych tabelarycznych. Do obsługi używamy modułu `csv`.
 
 ```python
 import csv
 
 # Odczyt danych z pliku CSV (DictReader - wiersz jako słownik)
-with open('produkty.csv', mode='r', encoding='utf-8') as f:
+with open("produkty.csv", mode="r", encoding="utf-8") as f:
     czytelnik = csv.DictReader(f)
     for wiersz in czytelnik:
         print(f"Produkt: {wiersz['nazwa']}, Cena: {wiersz['cena']}")
 
 # Zapis danych do pliku CSV
-dane = [{'nazwa': 'Chleb', 'cena': 4.50}, {'nazwa': 'Mleko', 'cena': 3.20}]
-with open('nowe_produkty.csv', mode='w', newline='', encoding='utf-8') as f:
-    naglowki = ['nazwa', 'cena']
+dane = [{"nazwa": "Chleb", "cena": 4.50}, {"nazwa": "Mleko", "cena": 3.20}]
+with open("nowe_produkty.csv", mode="w", newline="", encoding="utf-8") as f:
+    naglowki = ["nazwa", "cena"]
     pisarz = csv.DictWriter(f, fieldnames=naglowki)
     pisarz.writeheader()
     pisarz.writerows(dane)
 ```
 
 ### Format JSON (JavaScript Object Notation)
+
 Lekki format wymiany danych, mapowany na słowniki i listy w Pythonie.
 
 ```mermaid
@@ -117,7 +124,7 @@ dane_osoby = {
     "imie": "Jan",
     "wiek": 30,
     "miasto": "Warszawa",
-    "umiejetnosci": ["Python", "SQL"]
+    "umiejetnosci": ["Python", "SQL"],
 }
 
 # Serializacja (Zapis do pliku)
@@ -127,12 +134,13 @@ with open("dane.json", "w", encoding="utf-8") as f:
 # Deserializacja (Odczyt z pliku)
 with open("dane.json", "r", encoding="utf-8") as f:
     wczytane_dane = json.load(f)
-    print(wczytane_dane["imie"]) # Jan
+    print(wczytane_dane["imie"])  # Jan
 ```
 
 ## 4. Moduły systemowe: pathlib, os, shutil, glob
 
 ### Pathlib i OS
+
 Współczesny Python zaleca używanie biblioteki `pathlib` do pracy ze ścieżkami.
 
 ```python
@@ -152,6 +160,7 @@ nowy_folder.mkdir(exist_ok=True)
 ```
 
 ### Moduł `shutil` (operacje wysokopoziomowe)
+
 Służy do kopiowania, przenoszenia i usuwania plików/folderów.
 
 ```python
@@ -165,6 +174,7 @@ shutil.copy("dane.txt", "kopia_danych.txt")
 ```
 
 ### Moduł `glob` (wyszukiwanie plików)
+
 Pomaga w znajdowaniu plików pasujących do wzorca (wildcards).
 
 ```python
