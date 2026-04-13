@@ -1,0 +1,54 @@
+repos:
+-   repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v6.0.0
+    hooks:
+    -   id: check-yaml
+    -   id: check-toml
+    -   id: check-json
+    -   id: end-of-file-fixer
+    -   id: trailing-whitespace
+    -   id: detect-private-key
+    -   id: check-added-large-files
+    -   id: check-merge-conflict
+    -   id: requirements-txt-fixer
+        name: "🔍 Pre-commit hooks"
+
+- repo: https://github.com/gitleaks/gitleaks
+  rev: v8.30.1
+  hooks:
+    - id: gitleaks
+      name: "🔒 Security · Detect hardcoded secrets"
+
+- repo: https://github.com/astral-sh/ruff-pre-commit
+  rev: v0.15.9
+  hooks:
+    - id: ruff-format
+      name: "🐍 Python · Format with Ruff"
+    # STRICT
+    - id: ruff
+      args: [ --fix ]
+
+- repo: https://github.com/abravalheri/validate-pyproject
+  rev: v0.25
+  hooks:
+    - id: validate-pyproject
+      name: "🐍 Python · Validate pyproject.toml"
+      additional_dependencies: [ "validate-pyproject-schema-store[all]" ]
+
+- repo: https://github.com/astral-sh/uv-pre-commit
+  # uv version.
+  rev: 0.11.5
+  hooks:
+    - id: uv-export
+      name: "🍀 uv · To autoexport uv.lock to requirements.txt"
+
+- repo: https://github.com/hukkin/mdformat
+  rev: 1.0.0
+  hooks:
+    - id: mdformat
+      name: "📝 Markdown · Format markdown"
+      additional_dependencies:
+        - mdformat-gfm          # GitHub-Flavored Markdown support
+        - mdformat-ruff         # Python code formatting
+        - mdformat-frontmatter  # YAML frontmatter support
+        - ruff                  # Required for mdformat-ruff
