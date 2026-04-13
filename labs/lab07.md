@@ -6,15 +6,47 @@ Celem zajęć jest zapoznanie się z przetwarzaniem danych w formatach struktura
 ## Teoria
 
 ### Format CSV (Comma Separated Values)
-Format CSV służy do przechowywania danych tabelarycznych w pliku tekstowym. Każdy wiersz pliku to jeden rekord, a kolumny oddzielone są separatorem (np. przecinkiem, średnikiem).
-W Pythonie do obsługi tego formatu wykorzystujemy moduł `csv`.
+Format CSV służy do przechowywania danych tabelarycznych. Każdy wiersz to jeden rekord, a kolumny oddzielone są separatorem (np. przecinkiem).
+
+**Przykład odczytu (csv.reader):**
+```python
+import csv
+with open('dane.csv', mode='r') as f:
+    reader = csv.reader(f)
+    for row in reader:
+        print(row) # row to lista stringów
+```
+
+**Przykład zapisu (csv.DictWriter):**
+```python
+import csv
+pola = ['id', 'nazwa']
+dane = [{'id': 1, 'nazwa': 'A'}, {'id': 2, 'nazwa': 'B'}]
+with open('wyjscie.csv', 'w', newline='') as f:
+    writer = csv.DictWriter(f, fieldnames=pola)
+    writer.writeheader()
+    writer.writerows(dane)
+```
 
 ### Format JSON (JavaScript Object Notation)
-JSON to lekki format wymiany danych, oparty na strukturze obiektowej (pary klucz-wartość oraz listy). Jest powszechnie stosowany w komunikacji sieciowej i plikach konfiguracyjnych.
-W Pythonie dane JSON są mapowane bezpośrednio na:
-- Obiekty `{}` -> słowniki (`dict`)
-- Tablice `[]` -> listy (`list`)
-Do obsługi używamy modułu `json`.
+JSON to format oparty na parach klucz-wartość.
+
+```mermaid
+graph LR
+    P[Obiekt Python] -- dump/dumps --> J[JSON]
+    J -- load/loads --> P
+```
+
+**Podstawowe funkcje:**
+- `json.dump(obj, file)` – zapisuje obiekt do pliku.
+- `json.load(file)` – odczytuje obiekt z pliku.
+- `json.dumps(obj)` – zamienia obiekt na string JSON.
+- `json.loads(string)` – zamienia string JSON na obiekt.
+
+### Przydatne moduły systemowe
+- `os.path.exists(path)` / `Path(path).exists()` – sprawdzenie czy plik istnieje.
+- `shutil.copy(src, dst)` – kopiowanie plików.
+- `glob.glob('*.json')` – pobieranie listy plików pasujących do wzorca.
 
 ## Zadania
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
@@ -37,3 +69,9 @@ Do obsługi używamy modułu `json`.
 8. **Obsługa błędów:** Zmodyfikuj dowolny z powyższych programów tak, aby bezpiecznie obsługiwał brak pliku (`FileNotFoundError`) oraz nieprawidłowy format danych (np. błąd podczas konwersji ceny na liczbę).
 9. **Integracja formatów (Konwerter):** Napisz program, który wczyta dane z pliku CSV (`produkty.csv`) i zapisze je do pliku JSON (`produkty.json`), dbając o to, aby liczby (cena, ilość) były zapisane w JSON jako typy numeryczne, a nie tekst.
 10. **Raport końcowy:** Napisz skrypt, który odczyta dane z pliku JSON (`studenci.json`), obliczy średnią ocen dla każdego studenta, a następnie wygeneruje raport tekstowy `raport.txt` z wynikami.
+
+### Część 4: Operacje na systemie plików (Moduły systemowe)
+
+11. **Kopia zapasowa:** Napisz program, który wykorzystując moduł `shutil`, utworzy folder `backup` i skopiuje do niego wszystkie pliki `.csv` z bieżącego katalogu.
+12. **Masowa zmiana nazw:** Napisz skrypt, który znajdzie wszystkie pliki `.json` w folderze (użyj `glob`) i zmieni ich nazwę, dodając przedrostek `data_` (użyj `os.rename` lub `Path.rename`).
+13. **Inwentaryzacja:** Napisz program, który przejdzie przez wszystkie pliki w bieżącym folderze i zapisze do pliku `struktura.json` informację o każdym pliku: nazwę, rozmiar w KB oraz datę ostatniej modyfikacji.
