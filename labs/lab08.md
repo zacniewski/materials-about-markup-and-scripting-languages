@@ -6,15 +6,20 @@ Praktyczne tworzenie dokumentów przy użyciu języków znaczników.
 
 ## Teoria w pigułce
 
-- Markdown to lekki język do formatowania treści (README, dokumentacja).
-- HTML definiuje strukturę strony; wygląd nadaje CSS.
-- Semantyczne tagi HTML5 (`header`, `nav`, `main`, `section`, `footer`) poprawiają dostępność i SEO.
+- **Markdown** to lekki język do formatowania treści (README, dokumentacja).
+- **HTML** definiuje strukturę strony; wygląd nadaje CSS (Cascading Style Sheets).
+- **Semantyczne tagi HTML5** (`header`, `nav`, `main`, `section`, `footer`) poprawiają dostępność i SEO.
+- **Atrybuty** (`src`, `href`, `alt`, `id`, `class`) dostarczają dodatkowych informacji o elementach.
+- **Formularze** pozwalają na interakcję z użytkownikiem (`input`, `select`, `button`).
+
+### Proces renderowania:
 
 ```mermaid
-graph TD
-  A[Markdown] -->|render| B[HTML]
-  B --> C[DOM w przeglądarce]
-  C --> D[Stylowanie CSS]
+graph LR
+    MD[.md] -->|Parser| HTML[.html]
+    HTML -->|Browser| DOM[DOM Tree]
+    DOM -->|CSS| Render[Render Tree]
+    Render -->|Layout| Paint[Ekran]
 ```
 
 ## Zadania
@@ -39,3 +44,6 @@ graph TD
 1. W HTML zaimplementuj menu nawigacyjne (`<nav>`) z linkami do różnych sekcji strony (użyj kotwic `#id`).
 1. Dodaj do strony HTML stopkę (`<footer>`) z informacją o prawach autorskich oraz aktualnym rokiem.
 1. Stwórz prosty diagram Mermaid w Markdown, przedstawiający hierarchię plików w Twoim projekcie.
+1. **[ZADANIE DODATKOWE]** W pliku Markdown wykorzystaj składnię LaTeX do zapisania twierdzenia Pitagorasa oraz wzoru na deltę w równaniu kwadratowym.
+1. **[ZADANIE DODATKOWE]** Na stronie HTML osadź wideo z serwisu YouTube (używając `<iframe>`) oraz dodaj element `<audio>` z dowolnym plikiem dźwiękowym (lub linkiem).
+1. **[ZADANIE DODATKOWE]** Stwórz złożoną tabelę HTML z użyciem atrybutów `colspan` oraz `rowspan` (np. plan lekcji z łączonymi godzinami).
