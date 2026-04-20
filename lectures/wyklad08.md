@@ -4,6 +4,50 @@
 
 Markdown to lekki język znaczników służący do formatowania tekstu za pomocą prostej składni tekstowej. Jest szeroko stosowany w dokumentacji (np. README na GitHubie), na forach (StackOverflow) oraz w komunikatorach (Slack, Discord).
 
+### Rozbudowane przykłady Markdown:
+
+1. **Zagnieżdżone listy:**
+
+   ```markdown
+   *   Owoce
+       *   Jabłka
+           *   Ligol
+           *   Szampion
+       *   Banany
+   *   Warzywa
+       1.  Marchew
+       2.  Pietruszka
+   ```
+
+1. **Różne style linków:**
+
+   ```markdown
+   [Link tekstowy](https://www.google.com)
+   [Link z tytułem](https://www.google.com "Wyszukiwarka Google")
+   Link referencyjny: [Google][1]
+   ...
+   [1]: https://www.google.com
+   ```
+
+1. **Bloki kodu z określeniem języka:**
+
+   ```python
+   def hello():
+       print("Hello World")
+   ```
+
+   ```bash
+   ls -la /home/user
+   ```
+
+1. **Zadania (Task Lists):**
+
+   ```markdown
+   - [x] Instalacja Pythona
+   - [x] Nauka podstaw HTML
+   - [ ] Projekt końcowy
+   ```
+
 ### Rozszerzona składnia Markdown:
 
 | Efekt              | Składnia                   | Uwagi                      |
@@ -58,6 +102,31 @@ ______________________________________________________________________
 
 HTML jest szkieletem strony internetowej. Definiuje on strukturę i semantykę treści, ale nie jej wygląd (tym zajmuje się CSS).
 
+### Znaczniki (Tagi) i ich rodzaje
+
+W HTML wyróżniamy dwa główne rodzaje tagów ze względu na ich budowę:
+
+1. **Tagi parzyste (Paired tags):** Składają się z tagu otwierającego i zamykającego. Obejmują one treść, którą formatują.
+   - Przykład: `<p>To jest akapit.</p>`
+   - Przykład: `<strong>Ważny tekst</strong>`
+1. **Tagi pojedyncze/samozamykające (Single/Self-closing tags):** Nie posiadają tagu zamykającego, ponieważ nie zawierają treści tekstowej wewnątrz siebie (tzw. elementy puste - void elements).
+   - Przykład: `<br>` (przełamanie linii)
+   - Przykład: `<hr>` (linia pozioma)
+   - Przykład: `<img src="logo.png" alt="Logo">` (obrazek)
+
+### Atrybuty elementów
+
+Atrybuty dostarczają dodatkowych informacji o elementach. Zawsze znajdują się w **tagu otwierającym** i mają postać `nazwa="wartość"`.
+
+- **Atrybuty wymagane:** Np. `src` i `alt` dla `<img>`, `href` dla `<a>`.
+- **Atrybuty opcjonalne:** Np. `target="_blank"` dla linków.
+- **Atrybuty logiczne:** Nie wymagają wartości (sama obecność atrybutu oznacza "tak"). Np. `required`, `disabled`, `checked`.
+
+### Pełna lista elementów HTML
+
+Pełny wykaz wszystkich tagów HTML wraz z ich opisem i kategoriami znajdziesz w oficjalnej dokumentacji MDN:
+👉 **[MDN Web Docs: HTML elements reference](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Elements)**
+
 ### Diagram struktury dokumentu HTML:
 
 ```mermaid
@@ -74,6 +143,34 @@ graph TD
     SECTION --> H1[h1-h6]
     SECTION --> P[p]
 ```
+
+### Przykłady użycia tagów:
+
+Oto przykłady połączenia tagów z atrybutami i różnymi typami treści:
+
+1. **Obraz z linkiem (zagnieżdżanie tagów):**
+   ```html
+   <a href="https://github.com" target="_blank">
+       <img src="https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png" alt="Logo GitHub" width="50">
+   </a>
+   ```
+1. **Tabela z atrybutami obramowania (choć zaleca się CSS):**
+   ```html
+   <table border="1">
+       <tr>
+           <th>Nazwa</th>
+           <th>Wartość</th>
+       </tr>
+       <tr>
+           <td>A</td>
+           <td>100</td>
+       </tr>
+   </table>
+   ```
+1. **Element interaktywny:**
+   ```html
+   <button type="button" onclick="alert('Kliknięto!')" title="Najedź, aby zobaczyć opis">Kliknij mnie</button>
+   ```
 
 ### Semantyka w HTML5:
 
