@@ -6,29 +6,76 @@ Wykorzystanie CSS do zmiany wyglądu strony HTML.
 
 ## Teoria w pigułce
 
-- Specyficzność: `#id` > `.klasa` > `tag` > `*`.
-- Box model: element = content + padding + border + margin.
-- RWD: Media Queries pozwalają dostosować styl do szerokości ekranu.
+### Metody dołączania stylów
+
+1. **Zewnętrzny plik:** `<link rel="stylesheet" href="style.css">`
+1. **Tag style:** `<style> ... </style>`
+1. **Atrybut style:** `<div style="...">`
+
+### Selektory i specyficzność
+
+- `#id` (100) > `.klasa` (10) > `tag` (1) > `*` (0).
+
+### Box Model (Model Pudełkowy)
+
+Każdy element HTML jest traktowany jako prostokątne pudełko.
 
 ```mermaid
 graph TD
-  A[Element] --> B[Content]
-  B --> C[Padding]
-  C --> D[Border]
-  D --> E[Margin]
+    subgraph "Model Pudełkowy"
+    M[Margin - Margines zewnętrzny] --> B[Border - Obramowanie]
+    B --> P[Padding - Margines wewnętrzny]
+    P --> C[Content - Treść: tekst, obraz]
+    end
+    style C fill:#fff,stroke:#333
+    style P fill:#e1f5fe,stroke:#01579b
+    style B fill:#ffe0b2,stroke:#e65100
+    style M fill:#f1f8e9,stroke:#33691e
 ```
+
+### Flexbox vs Grid
+
+- **Flexbox:** Układ jednowymiarowy (rzędy LUB kolumny). Świetny do nawigacji.
+- **Grid:** Układ dwuwymiarowy (rzędy I kolumny). Idealny do całego layoutu strony.
 
 ## Zadania
 
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
 
-1. Stwórz plik `style.css` i podłącz go do swojej strony `index.html` z poprzednich zajęć.
-1. Zmień czcionkę na całej stronie na bezszeryfową (np. `Arial`).
-1. Wyśrodkuj nagłówek `<h1>` i zmień jego kolor na ciemnozielony.
-1. Ustaw kolor tła strony na jasnoszary.
-1. Użyj klasy (`class`), aby nadać specyficzny styl wybranemu akapitowi (np. ramka, wewnętrzny margines `padding`, kolor tekstu).
-1. Wykorzystaj model pudełkowy: nadaj elementom listy `<li>` marginesy zewnętrzne i obramowanie.
-1. Stwórz prosty przycisk przy użyciu tagu `<a>` i ostyluj go tak, aby zmieniał kolor po najechaniu myszką (`:hover`).
-1. Zaimplementuj prosty układ strony typu "Two-column layout" przy użyciu Flexboxa (np. boczny pasek nawigacyjny i główna treść).
-1. Dodaj reguły Media Queries, aby na urządzeniach mobilnych (szerokość poniżej 600px) tło strony zmieniało kolor, a rozmiar czcionki był mniejszy.
-1. Użyj CSS Grid do stworzenia galerii zdjęć (min. 4 zdjęcia w układzie kafelkowym).
+### Część 1: Podstawy i Typografia
+
+1. **Podłączenie stylów:** Stwórz plik `style.css` i podłącz go do swojej strony `index.html` z poprzednich zajęć za pomocą tagu `<link>`.
+1. **Czcionki:** Zmień czcionkę na całej stronie na bezszeryfową (np. `Arial, sans-serif`).
+1. **Nagłówek:** Wyśrodkuj nagłówek `<h1>`, zmień jego kolor na ciemnozielony i dodaj cień tekstu (`text-shadow`).
+1. **Tło:** Ustaw kolor tła strony na jasnoszary, a kolor tekstu głównego na ciemnoszary.
+
+### Część 2: Model Pudełkowy (Box Model)
+
+1. **Klasy i ramki:** Stwórz klasę `.card` i nadaj jej:
+   - Obramowanie (`border: 1px solid #ccc`).
+   - Wewnętrzny margines (`padding: 20px`).
+   - Zewnętrzny margines (`margin: 10px`).
+   - Zaokrąglone rogi (`border-radius: 8px`).
+1. **Przyciski:** Stwórz przycisk z tagu `<a>` i ostyluj go:
+   - Usuń podkreślenie (`text-decoration: none`).
+   - Dodaj tło i kolor tekstu.
+   - Wykorzystaj `:hover`, aby zmienić kolor tła po najechaniu myszką.
+
+### Część 3: Layout (Flexbox i Grid)
+
+1. **Flexbox Nawigacja:** Stwórz menu nawigacyjne (`<nav>` i `<ul>`). Użyj `display: flex`, aby ułożyć elementy listy w poziomie i `justify-content: space-around`, aby je rozmieścić.
+1. **Grid Galeria:** Stwórz sekcję z 4-6 obrazkami (lub kolorowymi `div`). Użyj `display: grid`:
+   ```css
+   .gallery {
+     display: grid;
+     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+     gap: 15px;
+   }
+   ```
+
+### Część 4: RWD (Media Queries)
+
+1. **Adaptacja:** Dodaj reguły Media Queries, aby:
+   - Na urządzeniach mobilnych (poniżej 600px) menu nawigacyjne zmieniało orientację na pionową (`flex-direction: column`).
+   - Zmieniał się kolor tła strony, aby zasygnalizować zmianę trybu.
+   - Nagłówki stawały się mniejsze.

@@ -4,6 +4,46 @@
 
 CSS (Cascading Style Sheets) to kaskadowe arkusze stylów używane do opisu prezentacji dokumentu HTML. Pozwalają one na zmianę kolorów, czcionek, układu elementów (layoutu) oraz dodawanie animacji.
 
+### Gdzie umieszczać odnośniki do plików CSS?
+
+Istnieją trzy główne sposoby dodawania stylów CSS do dokumentu HTML:
+
+1. **Zewnętrzny arkusz stylów (External CSS):** Najlepsza praktyka. Style znajdują się w osobnym pliku `.css`.
+   ```html
+   <head>
+       <link rel="stylesheet" href="style.css">
+   </head>
+   ```
+1. **Wewnętrzny arkusz stylów (Internal CSS):** Style umieszczone w sekcji `<head>` wewnątrz tagu `<style>`.
+   ```html
+   <head>
+       <style>
+           body { background-color: linen; }
+       </style>
+   </head>
+   ```
+1. **Style liniowe (Inline CSS):** Styl dopisany bezpośrednio do atrybutu `style` elementu. Niezalecane przy większych projektach.
+   ```html
+   <h1 style="color:blue;">To jest niebieski nagłówek</h1>
+   ```
+
+### Wybór CSS na podstawie urządzenia (Media Queries w <link>)
+
+Możemy określić, który plik CSS ma zostać załadowany w zależności od typu urządzenia lub parametrów ekranu bezpośrednio w tagu `<link>`:
+
+```html
+<!-- Domyślny styl dla wszystkich urządzeń -->
+<link rel="stylesheet" href="main.css">
+
+<!-- Styl tylko do druku -->
+<link rel="stylesheet" href="print.css" media="print">
+
+<!-- Styl dla urządzeń o szerokości ekranu mniejszej niż 600px (telefony) -->
+<link rel="stylesheet" href="mobile.css" media="screen and (max-width: 600px)">
+```
+
+## 2. Selektory, kaskada i specyficzność
+
 ### Kaskadowość i Specyficzność:
 
 - **Kaskadowość:** Jeśli do tego samego elementu odnoszą się sprzeczne reguły, CSS rozstrzyga, która ma pierwszeństwo na podstawie źródła i ważności.
@@ -12,16 +52,20 @@ CSS (Cascading Style Sheets) to kaskadowe arkusze stylów używane do opisu prez
 ### Diagram specyficzności selektorów:
 
 ```mermaid
-graph LR
-    ID[ID: #header - 100] --> Class[Klasa: .btn - 10]
-    Class --> Tag[Tag: h1 - 1]
-    Tag --> Universal[Uniwersalny: * - 0]
-    style ID fill:#f96,stroke:#333
-    style Class fill:#69f,stroke:#333
-    style Tag fill:#9f6,stroke:#333
-```
+graph TD
+    Start[Źródła stylów] --> UA[Style przeglądarki]
+    UA --> User[Style użytkownika]
+    User --> Author[Style autora - Twój CSS]
+    Author --> Important[!important - Najwyższy priorytet]
 
-## 2. Selektory i kaskada
+    subgraph "Waga selektorów (Specyficzność)"
+    direction LR
+    S1[Inline style] -- 1000 --> S2[ID #header]
+    S2 -- 100 --> S3[Class .btn]
+    S3 -- 10 --> S4[Tag h1]
+    S4 -- 1 --> S5[Universal *]
+    end
+```
 
 ```css
 /* Selektor elementu - dotyczy wszystkich <h2> */
@@ -123,12 +167,49 @@ button {
 - Hex: `#ff0000`, `#333`
 - RGB/RGBA: `rgb(255, 0, 0)`, `rgba(0, 0, 0, 0.5)` (z przezroczystością)
 
-### Jednostki:
+## 6. RWD i Media Queries (Adaptacja do urządzeń)
 
-| Jednostka   | Typ       | Opis                                           |
-| ----------- | --------- | ---------------------------------------------- |
-| `px`        | Stała     | Piksele                                        |
-| `%`         | Relatywna | Procent elementu nadrzędnego                   |
-| `em`        | Relatywna | Zależna od rozmiaru czcionki elementu          |
-| `rem`       | Relatywna | Zależna od rozmiaru czcionki elementu `<html>` |
-| `vh` / `vw` | Relatywna | 1% wysokości/szerokości okna (viewport)        |
+Media Queries to kluczowy element Responsive Web Design (RWD). Pozwalają one na zmianę wyglądu strony w zależności od cech urządzenia.
+
+### Typowe punkty kontrolne (Breakpoints):
+
+| Urządzenie | Przykładowa szerokość | Media Query                          |
+| :--------- | :-------------------- | :----------------------------------- |
+| Smartfony  | do 600px              | `@media (max-width: 600px) { ... }`  |
+| Tablety    | 601px - 992px         | `@media (min-width: 601px) { ... }`  |
+| Laptopy    | 993px - 1200px        | `@media (min-width: 993px) { ... }`  |
+| Desktopy   | powyżej 1200px        | `@media (min-width: 1201px) { ... }` |
+
+### Przykład wewnątrz pliku CSS:
+
+```css
+/* Style domyślne (np. dla komputerów) */
+.sidebar { width: 25%; float: left; }
+.main-content { width: 75%; float: left; }
+
+/* Zmiana układu dla telefonów */
+@media screen and (max-width: 600px) {
+    .sidebar, .main-content {
+        width: 100%; /* Elementy zajmują pełną szerokość */
+        float: none;
+    }
+    body {
+        font-size: 14px;
+    }
+}
+```
+
+### Porównanie metod układania treści:
+
+| Cecha        | Float                   | Flexbox                    | CSS Grid                      |
+| :----------- | :---------------------- | :------------------------- | :---------------------------- |
+| Kierunek     | Horyzontalny            | 1D (Wiersz LUB Kolumna)    | 2D (Wiersz I Kolumna)         |
+| Centrowanie  | Trudne                  | Bardzo łatwe               | Bardzo łatwe                  |
+| Zastosowanie | Proste opływanie tekstu | Menu, nawigacja, przyciski | Cały szkielet strony, galerie |
+
+```mermaid
+pie title Popularność metod układu (szacunkowa)
+    "CSS Grid" : 45
+    "Flexbox" : 40
+    "Inne (Float, Table)" : 15
+```
