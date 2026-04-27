@@ -38,6 +38,42 @@ graph TD
 - **Flexbox:** Układ jednowymiarowy (rzędy LUB kolumny). Świetny do nawigacji.
 - **Grid:** Układ dwuwymiarowy (rzędy I kolumny). Idealny do całego layoutu strony.
 
+### Wizualizacja docelowego układu
+
+Poniższy schemat przedstawia, jak może wyglądać gotowa strona po wykonaniu zadań z Części 3 i 4:
+
+```mermaid
+graph TD
+    subgraph "Widok Desktopowy"
+    direction TB
+    D_NAV["Menu: Element 1 | Element 2 | Element 3"]
+    subgraph D_GALLERY [Galeria Grid]
+        direction LR
+        D_G1[Zdjęcie]
+        D_G2[Zdjęcie]
+        D_G3[Zdjęcie]
+    end
+    D_NAV --- D_GALLERY
+    end
+
+    subgraph "Widok Mobilny (< 600px)"
+    direction TB
+    M_NAV["Menu (pionowe):<br/>Element 1<br/>Element 2<br/>Element 3"]
+    subgraph M_GALLERY [Galeria Grid]
+        direction TB
+        M_G1[Zdjęcie]
+        M_G2[Zdjęcie]
+        M_G3[Zdjęcie]
+    end
+    M_NAV --- M_GALLERY
+    end
+
+    style D_NAV fill:#e1f5fe,stroke:#01579b
+    style M_NAV fill:#e1f5fe,stroke:#01579b
+    style D_GALLERY fill:#fff9c4,stroke:#fbc02d
+    style M_GALLERY fill:#fff9c4,stroke:#fbc02d
+```
+
 ## Zadania
 
 *Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
