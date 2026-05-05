@@ -27,13 +27,13 @@ moj_projekt/
 
 ### Najczęstsze filtry Jinja2
 
-| Filtr        | Przykład     | Wynik               |
-| :----------- | :----------- | :------------------ |
-| `upper`      | \`{{ "ala"   | upper }}\`          |
-| `lower`      | \`{{ "ALA"   | lower }}\`          |
-| `capitalize` | \`{{ "ala"   | capitalize }}\`     |
-| `length`     | \`{{ [1,2,3] | length }}\`         |
-| `default`    | \`{{ brak    | default('N/A') }}\` |
+| Filtr        | Przykład                | Wynik               |
+| :----------- | :---------------------- | :------------------ |
+| `upper`      | `{{ "ala" &#124; upper }}`   | `ALA`               |
+| `lower`      | `{{ "ALA" &#124; lower }}`   | `ala`               |
+| `capitalize` | `{{ "ala" &#124; capitalize }}` | `Ala`               |
+| `length`     | `{{ [1,2,3] &#124; length }}` | `3`                 |
+| `default`    | `{{ brak &#124; default('N/A') }}` | `N/A`               |
 
 ### Komunikacja Klient-Serwer
 
