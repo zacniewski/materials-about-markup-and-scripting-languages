@@ -29,11 +29,11 @@ moj_projekt/
 
 | Filtr        | Przykład                | Wynik               |
 | :----------- | :---------------------- | :------------------ |
-| `upper`      | `{{ "ala" &#124; upper }}`   | `ALA`               |
-| `lower`      | `{{ "ALA" &#124; lower }}`   | `ala`               |
-| `capitalize` | `{{ "ala" &#124; capitalize }}` | `Ala`               |
-| `length`     | `{{ [1,2,3] &#124; length }}` | `3`                 |
-| `default`    | `{{ brak &#124; default('N/A') }}` | `N/A`               |
+| `upper`      | `{{ "ala" \| upper }}`   | `ALA`               |
+| `lower`      | `{{ "ALA" \| lower }}`   | `ala`               |
+| `capitalize` | `{{ "ala" \| capitalize }}` | `Ala`               |
+| `length`     | `{{ [1,2,3] \| length }}` | `3`                 |
+| `default`    | `{{ brak \| default('N/A') }}` | `N/A`               |
 
 ### Komunikacja Klient-Serwer
 
