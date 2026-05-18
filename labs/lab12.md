@@ -2,33 +2,97 @@
 
 ## Cel zajęć
 
-Wykorzystanie formatu JSON do przesyłania i przechowywania danych.
+Wykorzystanie formatu JSON do przesyłania i przechowywania danych w językach Python i JavaScript.
 
 ## Teoria w pigułce
 
-- JSON: klucze w cudzysłowie, wartości: liczby, string, bool, null, obiekty, tablice.
-- W Pythonie: `json.loads/loads` (tekst↔obiekt), `json.dump/dumps` (plik↔obiekt).
-- Walidacja i obsługa błędów: `try/except` przy parsowaniu.
+### JSON (JavaScript Object Notation)
+
+- **Klucze:** zawsze w podwójnym cudzysłowie.
+- **Wartości:** liczby, stringi, wartości logiczne, null, obiekty lub tablice.
+- **Rozszerzenie pliku:** `.json`.
+
+### Obsługa w różnych językach:
+
+| Funkcja            | Python (`import json`)    | JavaScript (Natywne)             |
+| :----------------- | :------------------------ | :------------------------------- |
+| **Tekst → Obiekt** | `json.loads(tekst)`       | `JSON.parse(tekst)`              |
+| **Obiekt → Tekst** | `json.dumps(obiekt)`      | `JSON.stringify(obiekt)`         |
+| **Plik → Obiekt**  | `json.load(plik)`         | `fetch(url).then(r => r.json())` |
+| **Obiekt → Plik**  | `json.dump(obiekt, plik)` | *Wymaga Node.js (fs)*            |
 
 ```mermaid
 graph LR
-  T[tekst JSON] -- parse --> O[obiekt Python]
-  O -- stringify --> T
-  O -- dump --> P[plik .json]
-  P -- load --> O
+    A[Plik JSON] -- "Python: json.load()" --> B(Obiekt w pamięci)
+    B -- "Python: json.dump()" --> A
+    C[API / Serwer] -- "JS: fetch()" --> D(Obiekt JS)
+    D -- "JS: JSON.stringify()" --> E[Tekst JSON]
 ```
+
+______________________________________________________________________
 
 ## Zadania
 
-*Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.*
+### Zadanie 1: Struktura danych
 
-1. Stwórz plik `dane.json`, w którym zapiszesz informacje o 3 książkach (tytuł, autor, rok wydania).
-1. W języku JavaScript stwórz obiekt reprezentujący samochód. Użyj `JSON.stringify()`, aby zamienić go na tekst i wyświetlić w konsoli przeglądarki.
-1. Napisz skrypt w Pythonie, który odczyta plik `dane.json` i wypisze tylko tytuły książek.
-1. Użyj darmowego API (np. [JSONPlaceholder](https://jsonplaceholder.typicode.com/todos/1)), aby pobrać dane w formacie JSON (użyj modułu `requests` w Pythonie lub `fetch` w JavaScript).
-1. Napisz program w Pythonie, który pobiera od użytkownika dane o nowej książce i dopisuje je do istniejącego pliku `dane.json`.
-1. Stwórz skrypt, który parsuje złożony obiekt JSON zawierający zagnieżdżone listy i słowniki, a następnie wyciąga z niego konkretną informację (np. nazwę drugiego tagu u trzeciego użytkownika).
-1. Napisz program, który konwertuje listę słowników w Pythonie na ładnie sformatowany (z wcięciami) ciąg znaków JSON i zapisuje go do pliku.
-1. Napisz walidator JSON w Pythonie, który sprawdza, czy dany plik ma poprawną strukturę JSON (użyj `try-except`).
-1. Stwórz skrypt w JavaScript, który wczytuje dane JSON (np. listę osób) i dynamicznie tworzy tabelę HTML na ich podstawie.
-1. Napisz program, który porównuje dwa pliki JSON i wypisuje różnice między nimi (np. brakujące klucze).
+Stwórz plik `dane.json`, w którym zapiszesz informacje o 3 książkach. Każda książka powinna mieć: `tytuł`, `autor`, `rok_wydania` oraz listę `tagi`.
+
+### Zadanie 2: JSON w JavaScript (Podstawy)
+
+W konsoli przeglądarki (F12) wykonaj poniższe kroki:
+
+1. Stwórz obiekt `auto` z polami `marka`, `model`.
+1. Zamień go na string za pomocą `JSON.stringify()`.
+1. Dodaj trzeci parametr do `stringify` (np. `2`), aby zobaczyć "ładne" formatowanie.
+
+```javascript
+const auto = { marka: "Tesla", model: "S" };
+const jsonString = JSON.stringify(auto, null, 2);
+console.log(jsonString);
+```
+
+### Zadanie 3: Odczyt z pliku (Python)
+
+Napisz skrypt w Pythonie, który odczyta plik `dane.json` (z Zadania 1) i wypisze tylko tytuły książek w formie listy punktowanej.
+
+### Zadanie 4: Praca z API (Fetch API)
+
+Wykorzystaj darmowe API do pobrania danych. Wklej poniższy kod do konsoli przeglądarki i przeanalizuj jak działa:
+
+```javascript
+fetch('https://jsonplaceholder.typicode.com/users')
+  .then(response => response.json())
+  .then(users => {
+    users.forEach(user => {
+      console.log(`Użytkownik: ${user.name}, Miasto: ${user.address.city}`);
+    });
+  });
+```
+
+### Zadanie 5: Aktualizacja danych (Python)
+
+Napisz program w Pythonie, który:
+
+1. Wczyta plik `dane.json`.
+1. Pobierze od użytkownika dane o nowej książce (`input()`).
+1. Dopisze nową książkę do listy w obiekcie.
+1. Zapisze zaktualizowaną listę z powrotem do pliku `dane.json`.
+
+### Zadanie 6: Walidacja JSON
+
+Napisz skrypt, który prosi użytkownika o wpisanie ciągu znaków JSON. Program ma sprawdzić, czy format jest poprawny. Użyj bloku `try-except` (Python) lub `try-catch` (JS).
+
+### Zadanie 7: Dynamiczna tabela HTML (JS)
+
+Stwórz prosty plik `index.html`. Napisz skrypt, który weźmie tablicę obiektów (np. listę studentów) i wygeneruje na jej podstawie tabelę `<table>` w dokumencie HTML.
+
+### Zadanie 8: Porównywanie plików (Dla chętnych)
+
+Napisz program, który wczytuje dwa pliki JSON i sprawdza, czy mają one te same klucze na głównym poziomie.
+
+______________________________________________________________________
+
+## Przydatne narzędzia
+
+- [JSONLint](https://jsonlint.com/) – walidator online.
+- [JSON Formatter](https://jsonformatter.curiousconcept.com/) – formatowanie i weryfikacja.
