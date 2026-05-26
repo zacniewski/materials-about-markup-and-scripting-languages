@@ -55,7 +55,7 @@ Poznanie różnych formatów danych (XML, YAML, CSV, JSON) oraz nabycie umiejęt
      {"id": 2, "imie": "Adam"}
    ]
    ```
-1. Napisz skrypt, który odczytuje plik CSV i zlicza, ile razy każda wartość występuje w określonej kolumnie (np. ile produktów należy do danej kategorii).
+1. Napisz skrypt, który odczytuje plik CSV i zlicza, ile razy każda wartość występuje w kolumnie `cena`.
 1. **Zadanie zaawansowane (Konwerter):** Napisz uniwersalny konwerter, który przyjmuje plik CSV i konwertuje go na JSON lub YAML w zależności od wyboru użytkownika.
 
 ```mermaid
