@@ -1,82 +1,64 @@
-# Laboratorium 14: Sprawdzian z podstaw Pythona i OOP + Sprawdzian z technologii webowych
+# Laboratorium 14: Sprawdzian z Pythona i Technologii Webowych (Część 1)
 
-Poniżej znajdują się przykładowe zadania na kolokwium. Podobne zadania mogą wystąpić na właściwym kolokwium sprawdzającym umiejętności praktyczne. Poniższe zadania są zadaniami sugerowanymi i mogą ulec modyfikacji przez prowadzącego zajęcia.
+Poniżej znajdują się przykładowe zadania na kolokwium. Zostały one wymieszane, aby sprawdzić wiedzę zarówno z języka Python, jak i technologii webowych.
 
 ## Cel
 
-Sprawdzenie umiejętności z zakresu podstaw programowania w języku Python, pracy z kolekcjami, funkcjami oraz programowania obiektowego.
+Sprawdzenie umiejętności z zakresu podstaw programowania w języku Python, OOP oraz podstaw HTML/CSS i JavaScript.
 
 ## Teoria w pigułce (zakres)
 
-- Python: typy, instrukcje warunkowe, pętle, funkcje (parametry domyślne, `*args`, `**kwargs`), moduły, pliki, wyjątki.
-- Kolekcje: listy, krotki, zbiory, słowniki + podstawowe metody.
-- OOP: klasy, `__init__`, dziedziczenie, nadpisywanie metod, `__str__`.
-
-```mermaid
-classDiagram
-  class Zwierze{+daj_glos()}
-  class Pies{+daj_glos()}
-  Zwierze <|-- Pies
-```
+- Python: typy, pętle, funkcje, kolekcje (listy, słowniki), OOP.
+- Web: HTML5, CSS (box model, kolory), JS (DOM, zdarzenia).
 
 ## Przykładowe zadania
 
-### Zadanie 1: Przetwarzanie danych liczbowych (Podstawy)
+### Zadanie 1: Przetwarzanie danych liczbowych (Python)
 
-Napisz skrypt, który pobierze od użytkownika 5 liczb całkowitych i zapisze je na liście. Następnie program powinien wypisać:
+Napisz skrypt, który pobierze od użytkownika 5 liczb całkowitych i zapisze je na liście. Następnie program powinien wypisać sumę, średnią oraz wartość maksymalną i minimalną.
+*Podpowiedź: Użyj funkcji `input()` w pętli `for` oraz wbudowanych funkcji `sum()`, `max()` i `min()`.*
 
-- Sumę wszystkich liczb.
-- Średnią arytmetyczną.
-- Największą i najmniejszą wartość.
+### Zadanie 2: HTML i CSS (Struktura i Styl)
 
-### Zadanie 2: Analiza tekstu (Ciągi znaków i Słowniki)
+Stwórz prostą stronę HTML zawierającą nagłówek poziomu 1, tabelę z danymi trzech osób (Imię, Nazwisko, E-mail) oraz formularz kontaktowy.
+*Podpowiedź: Pamiętaj o znacznikach `<table>`, `<tr>`, `<td>`. Styl CSS dodaj w sekcji `<style>` wewnątrz `<head>`.*
 
-Napisz funkcję `licz_znaki(tekst)`, która przyjmuje ciąg znaków i zwraca słownik, w którym kluczami są poszczególne litery, a wartościami liczba ich wystąpień w tekście. Zignoruj wielkość liter i spacje.
+### Zadanie 3: Analiza tekstu (Python)
 
-### Zadanie 3: Zarządzanie biblioteką (OOP)
+Napisz funkcję `licz_znaki(tekst)`, która zwraca słownik z liczbą wystąpień każdej litery w tekście (zignoruj wielkość liter).
+*Podpowiedź: Metoda `.lower()` zamieni tekst na małe litery, a słownik pozwoli przechowywać pary litera:liczba.*
 
-Stwórz klasę `Ksiazka` z atrybutami: `tytul`, `autor`, `rok_wydania`, `czy_wypozyczona` (domyślnie `False`).
+### Zadanie 4: JavaScript (Interaktywność)
 
-- Dodaj metodę `wypozycz()`, która zmienia status na `True` (lub wypisuje komunikat, jeśli już jest wypożyczona).
-- Dodaj metodę `__str__`, która zwraca czytelny opis książki.
-- Stwórz listę kilku obiektów klasy `Ksiazka` i napisz pętlę, która wypisze tylko te książki, które zostały wydane po 2010 roku.
+Napisz skrypt w JS, który po kliknięciu przycisku sprawdzi, czy pole input w formularzu nie jest puste. Jeśli jest puste, wyświetl alert.
+*Podpowiedź: Użyj `document.getElementById().value` do pobrania wartości i `addEventListener` do obsługi kliknięcia.*
 
-### Zadanie 4: Logika i kolekcje
+### Zadanie 5: Zarządzanie biblioteką (Python - OOP)
 
-Mając listę słowników reprezentujących pracowników:
+Stwórz klasę `Ksiazka` z atrybutami `tytul`, `autor`, `rok_wydania` oraz metodą `__str__`. Dodaj metodę `wypozycz()`.
+*Podpowiedź: Metoda `__str__` powinna zwracać sformatowany napis (f-string).*
 
-```python
-pracownicy = [
-    {"imie": "Jan", "pensja": 4500},
-    {"imie": "Anna", "pensja": 5500},
-    {"imie": "Marek", "pensja": 3800},
-]
-```
+### Zadanie 6: Flask (Routing i Szablony)
 
-Napisz program, który obliczy średnią pensję i wypisze imiona osób zarabiających powyżej średniej.
+Stwórz prostą aplikację we Flasku, która pod adresem `/` wyświetla "Witaj!", a pod `/uzytkownik/<name>` wita osobę imieniem z URL.
+*Podpowiedź: Użyj dekoratora `@app.route('/')` oraz funkcji `render_template()`.*
 
-### Zadanie 5: Obsługa plików i wyjątków
+### Zadanie 7: Logika i kolekcje (Python)
 
-Napisz program, który spróbuje otworzyć plik wskazany przez użytkownika. Jeśli plik nie istnieje, program powinien wyświetlić przyjazny komunikat o błędzie (użyj `try-except`). Jeśli plik istnieje, program powinien policzyć liczbę słów w tym pliku.
+Mając listę słowników pracowników `[{"imie": "Jan", "pensja": 4500}, ...]`, oblicz średnią pensję i wypisz osoby zarabiającie powyżej niej.
+*Podpowiedź: Najpierw zsumuj pensje przechodząc pętlą po liście, a potem podziel przez `len(pracownicy)`.*
 
-### Zadania 6-10 (Dodatkowe ćwiczenia)
+### Zadanie 8: Obsługa plików i wyjątków (Python)
 
-### Zadanie 6: Generator haseł
+Napisz program, który spróbuje otworzyć plik tekstowy. Jeśli plik nie istnieje, obsłuż błąd `FileNotFoundError`.
+*Podpowiedź: Użyj bloku `try...except FileNotFoundError:`.*
 
-Napisz funkcję `generuj_haslo(dlugosc)`, która zwraca losowy ciąg znaków o podanej długości, składający się z liter i cyfr.
+### Zadanie 9: JavaScript i Style
 
-### Zadanie 7: System ocen
+Napisz skrypt w JS, który po kliknięciu przycisku zmieni kolor tła strony na losowy kolor HEX lub po prostu na "lightblue".
+*Podpowiedź: Możesz modyfikować `document.body.style.backgroundColor`.*
 
-Stwórz słownik, gdzie kluczami są nazwy przedmiotów, a wartościami listy ocen. Napisz program, który obliczy średnią ocen z każdego przedmiotu i wypisze przedmiot z najwyższą średnią.
+### Zadanie 10: Generator haseł (Python)
 
-### Zadanie 8: Dziedziczenie i pojazdy
-
-Stwórz klasę `Pojazd` oraz klasy pochodne `Rower` i `Autobus`. Dodaj atrybuty specyficzne dla każdego pojazdu (np. liczba przerzutek, liczba miejsc siedzących) i nadpisz metodę `info()`.
-
-### Zadanie 9: Filtrowanie plików tekstowych
-
-Napisz skrypt, który odczytuje plik tekstowy i zapisuje do nowego pliku tylko te linie, które zawierają określone słowo kluczowe podane przez użytkownika.
-
-### Zadanie 10: Suma liczb w tekście
-
-Napisz program, który wyodrębni wszystkie liczby z podanego napisu (np. "W 2024 roku mam 2 koty") i obliczy ich sumę.
+Napisz funkcję `generuj_haslo(dlugosc)`, która zwraca losowy ciąg znaków (litery i cyfry).
+*Podpowiedź: Skorzystaj z modułów `random` oraz `string` (np. `string.ascii_letters + string.digits`).*
